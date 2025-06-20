@@ -17,7 +17,7 @@
 ## 部署方式
 
 本项目通过GitHub Pages进行部署。
-访问地址: [项目预览链接](https://github.com/页面链接)
+访问地址: [项目预览链接](https://ogs-1-ogs.github.io/MONSTER-HUNTER-STORIES-2-/)
 
 ## 声明
 
