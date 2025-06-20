@@ -11,6 +11,20 @@
 这个项目是对CAPCOM游戏《MONSTER HUNTER STORIES 2: 毁灭之翼》官方网站的学习性模仿。
 项目仅供前端开发学习参考，展示了如何重现官方网站的视觉效果、布局和交互功能。
 
+## 测试账号信息
+
+以下是网站登录系统的测试账号：
+
+| 骑士ID (用户名) | 秘密口令 (密码) |
+|--------------|--------------|
+| rider | monsterhunt123 |
+| hunter@guild.com | rathalos2021 |
+| navirou | buddy4ever |
+| alwin | kinship123 |
+| kayna | thunder456 |
+
+您可以使用以上任何一组账号密码进行系统登录测试。
+
 ## 技术栈
 
 - HTML5
