@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monster Hunter - 骑士登录</title>
+  <link rel="stylesheet" href="/MONSTER HUNTER STORIES 2_ 毁灭之翼 _ CAPCOM_files/login.css">
+</head>
+
+<body>
+  <div class="decoration"></div>
+  <div class="decoration"></div>
+  <div class="decoration"></div>
+
+  <div class="login-container">
+    <div class="mh-logo">
+      <h1 class="mh-title">Monster Hunter</h1>
+      <p class="mh-subtitle">Stories 2: Wings of Ruin</p>
+    </div>
+
+    <div id="successMessage" class="success-message">
+      冒险开始！正在进入世界...
+    </div>
+
+    <form id="loginForm" class="login-form">
+      <div class="form-group">
+        <label for="username" class="form-label">骑士ID</label>
+        <input type="text" id="username" name="username" class="form-input" placeholder="输入你的骑士名称或邮箱" required>
+        <div class="error-message" id="usernameError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">秘密口令</label>
+        <div class="password-container">
+          <input type="password" id="password" name="password" class="form-input" placeholder="输入你的秘密口令" required>
+          <button type="button" class="password-toggle" id="passwordToggle">显示</button>
+        </div>
+        <div class="error-message" id="passwordError"></div>
+      </div>
+
+      <div class="game-options">
+        <label class="remember-rider">
+          <input type="checkbox" id="rememberMe" name="rememberMe">
+          <span>记住骑士</span>
+        </label>
+        <a href="forgot-password.html" class="forgot-quest" id="forgotPassword">忘记口令？</a>
+      </div>
+
+      <button type="submit" class="hunt-button" id="loginButton">
+        <span id="buttonText">开始冒险</span>
+      </button>
+    </form>
+
+    <div class="guild-divider">
+      <span>公会注册</span>
+    </div>
+
+    <div class="new-rider">
+      新手骑士？<a href="register.html" id="registerLink">加入公会</a>
+    </div>
+    <div class="Return-to-website">
+      暂时不登录 <a href="index.html" id="ReturnToWebsite">返回首页</a>
+    </div>
+  </div>
+  <!-- Floating parallax elements -->
+  <div class="parallax-element floating-icon" style="top: 20%; left: 10%;">🐉</div>
+  <div class="parallax-element floating-icon" style="top: 60%; right: 15%;">⚔️</div>
+  <div class="parallax-element floating-icon" style="top: 30%; right: 50%;">🗡️</div>
+  <div class="parallax-element floating-icon" style="bottom: 20%; left: 40%;">🌟</div>
+  <div class="parallax-element floating-icon" style="bottom: 30%; left: 20%;">⚡</div>
+  <div class="parallax-element floating-icon" style="top: 40%; right: 30%;">🔥</div>
+  <div class="parallax-element floating-icon" style="top: 70%; left: 60%;">🛡️</div>
+
+
+  <script>
+    class MonsterHunterLogin {
+      constructor() {
+        this.form = document.getElementById('loginForm');
+        this.usernameInput = document.getElementById('username');
+        this.passwordInput = document.getElementById('password');
+        this.loginButton = document.getElementById('loginButton');
+        this.buttonText = document.getElementById('buttonText');
+        this.passwordToggle = document.getElementById('passwordToggle');
+        this.successMessage = document.getElementById('successMessage');
+
+        this.init();
+      }
+
+      init() {
+        this.bindEvents();
+        this.loadRememberedRider();
+        this.addGameEffects();
+      }
+
+      bindEvents() {
+        this.form.addEventListener('submit', (e) => this.handleHuntStart(e));
+        this.passwordToggle.addEventListener('click', () => this.togglePasswordVisibility());
+        this.usernameInput.addEventListener('input', () => this.clearError('username'));
+        this.passwordInput.addEventListener('input', () => this.clearError('password'));
+
+        document.getElementById('forgotPassword').addEventListener('click', (e) => {
+          e.preventDefault();
+          this.handleForgotQuest();
+        });
+
+        document.getElementById('registerLink').addEventListener('click', (e) => {
+          e.preventDefault();
+          this.handleJoinGuild();
+        });
+
+        // 游戏风格的键盘事件
+        document.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter' && !this.loginButton.classList.contains('loading')) {
+            this.form.dispatchEvent(new Event('submit'));
+          }
+        });
+      }
+
+      async handleHuntStart(e) {
+        e.preventDefault();
+
+        if (this.loginButton.classList.contains('loading')) {
+          return;
+        }
+
+        const riderName = this.usernameInput.value.trim();
+        const secretCode = this.passwordInput.value;
+        const rememberRider = document.getElementById('rememberMe').checked;
+
+        if (!this.validateRiderCredentials(riderName, secretCode)) {
+          return;
+        }
+
+        this.setHuntingState(true);
+
+        try {
+          const huntResult = await this.performHuntLogin(riderName, secretCode);
+
+          if (huntResult.success) {
+            if (rememberRider) {
+              this.saveRiderCredentials(riderName);
+            } else {
+              this.clearSavedRiderCredentials();
+            }
+
+            this.showHuntSuccess();
+
+            setTimeout(() => {
+              this.enterHuntingWorld();
+            }, 2500);
+          } else {
+            this.showHuntError(huntResult.field || 'general', huntResult.message);
+          }
+        } catch (error) {
+          this.showHuntError('general', '连接猎团服务器失败，请稍后重试');
+        } finally {
+          this.setHuntingState(false);
+        }
+      }
+
+      validateRiderCredentials(riderName, secretCode) {
+        let isValidRider = true;
+
+        if (!riderName) {
+          this.showHuntError('username', '请输入你的骑士名称');
+          isValidRider = false;
+        } else if (riderName.length < 3) {
+          this.showHuntError('username', '骑士名称至少需要3个字符');
+          isValidRider = false;
+        }
+
+        if (!secretCode) {
+          this.showHuntError('password', '请输入秘密口令');
+          isValidRider = false;
+        } else if (secretCode.length < 6) {
+          this.showHuntError('password', '秘密口令至少需要6个字符');
+          isValidRider = false;
+        }
+
+        return isValidRider;
+      }
+
+      async performHuntLogin(riderName, secretCode) {
+        await new Promise(resolve => setTimeout(resolve, 2000));
+
+        // 怪物猎人主题的测试账户
+        const guildMembers = {
+          'rider': 'monsterhunt123',
+          'hunter@guild.com': 'rathalos2021',
+          'navirou': 'buddy4ever',
+          'alwin': 'kinship123',
+          'kayna': 'thunder456'
+        };
+
+        if (riderName in guildMembers && guildMembers[riderName] === secretCode) {
+          return { success: true };
+        } else if (riderName in guildMembers) {
+          return { success: false, field: 'password', message: '秘密口令错误，无法确认骑士身份' };
+        } else {
+          return { success: false, field: 'username', message: '该骑士不在公会名册中' };
+        }
+      }
+
+      showHuntError(field, message) {
+        const input = field === 'username' ? this.usernameInput : this.passwordInput;
+        const errorElement = document.getElementById(field + 'Error');
+
+        input.classList.add('error');
+        errorElement.textContent = message;
+        errorElement.classList.add('show');
+
+        // 添加震动效果
+        navigator.vibrate && navigator.vibrate(200);
+      }
+
+      clearError(field) {
+        const input = field === 'username' ? this.usernameInput : this.passwordInput;
+        const errorElement = document.getElementById(field + 'Error');
+
+        input.classList.remove('error');
+        errorElement.classList.remove('show');
+      }
+
+      setHuntingState(hunting) {
+        if (hunting) {
+          this.loginButton.classList.add('loading');
+          this.buttonText.textContent = '准备狩猎中...';
+          this.loginButton.disabled = true;
+        } else {
+          this.loginButton.classList.remove('loading');
+          this.buttonText.textContent = '开始狩猎';
+          this.loginButton.disabled = false;
+        }
+      }
+
+      showHuntSuccess() {
+        this.successMessage.classList.add('show');
+        // 成功音效模拟
+        this.playSuccessEffect();
+      }
+
+      togglePasswordVisibility() {
+        const isPassword = this.passwordInput.type === 'password';
+        this.passwordInput.type = isPassword ? 'text' : 'password';
+        this.passwordToggle.textContent = isPassword ? '隐藏' : '显示';
+      }
+
+      saveRiderCredentials(riderName) {
+        localStorage.setItem('rememberedRider', riderName);
+      }
+
+      loadRememberedRider() {
+        const rememberedRider = localStorage.getItem('rememberedRider');
+        if (rememberedRider) {
+          this.usernameInput.value = rememberedRider;
+          document.getElementById('rememberMe').checked = true;
+        }
+      }
+
+      clearSavedRiderCredentials() {
+        localStorage.removeItem('rememberedRider');
+      }
+
+      handleForgotQuest() {
+        window.location.href = 'forgot-password.html';
+      }
+
+      handleJoinGuild() {
+        window.location.href = 'register.html';
+      }
+
+      enterHuntingWorld() {
+        alert('🦖 狩猎开始！\n\n欢迎回来，骑士！你的随行兽正在等待你的归来。\n\n在实际应用中，这里会跳转到游戏主界面或玩家仪表板。\n\n愿你的狩猎之旅充满传奇！');
+      }
+
+      playSuccessEffect() {
+        // 创建简单的成功视觉效果
+        const container = document.querySelector('.login-container');
+        container.style.animation = 'none';
+        setTimeout(() => {
+          container.style.animation = 'successPulse 0.6s ease-out';
+        }, 10);
+      }
+
+      addGameEffects() {
+        // 添加输入框的游戏风格效果
+        const inputs = document.querySelectorAll('.form-input');
+        inputs.forEach(input => {
+          input.addEventListener('focus', function () {
+            this.style.boxShadow = '0 0 25px rgba(255, 204, 0, 0.4), inset 0 1px 3px rgba(0, 0, 0, 0.3)';
+          });
+
+          input.addEventListener('blur', function () {
+            if (!this.value) {
+              this.style.boxShadow = '';
+            }
+          });
+        });
+
+        // 添加成功脉冲动画
+        const style = document.createElement('style');
+        style.textContent = `
+                    @keyframes successPulse {
+                        0% { transform: scale(1); }
+                        50% { transform: scale(1.05); box-shadow: 0 0 50px rgba(255, 204, 0, 0.6); }
+                        100% { transform: scale(1); }
+                    }
+                `;
+        document.head.appendChild(style);
+      }
+    }
+
+    // 初始化怪物猎人登录系统
+    document.addEventListener('DOMContentLoaded', () => {
+      new MonsterHunterLogin();
+    });
+    // Enhanced parallax effect for floating elements
+    window.addEventListener('scroll', function () {
+      const scrolled = window.pageYOffset;
+      const parallaxElements = document.querySelectorAll('.parallax-element');
+
+      parallaxElements.forEach((element, index) => {
+        const speed = 0.5 + (index * 0.2);
+        const yPos = scrolled * speed;
+        const rotation = scrolled * 0.1 + (index * 30);
+
+        // Add some horizontal movement too
+        const xOffset = Math.sin(scrolled * 0.01 + index) * 20;
+
+        element.style.transform = `translate(${xOffset}px, ${yPos}px) rotate(${rotation}deg)`;
+      });
+    });
+  </script>
+</body>
+
+</html>

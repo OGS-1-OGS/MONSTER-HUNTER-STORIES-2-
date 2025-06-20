@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunter - Join Guild</title>
+    <link rel="stylesheet" href="/MONSTER HUNTER STORIES 2_ 毁灭之翼 _ CAPCOM_files/register.css">
+
+    <style>
+        /* 添加一些简单的样式 */
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 204, 0, 0.2);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="decoration"></div>
+    <div class="decoration"></div>
+    <div class="decoration"></div>
+
+    <div class="register-container">
+        <div class="mh-logo">
+            <h1 class="mh-title">Monster Hunter</h1>
+            <p class="mh-subtitle">加入猎人公会</p>
+        </div>
+
+        <!-- <div id="successMessage" class="success-message">
+            公会注册成功！准备迎接你的首只随行兽...
+        </div> -->
+
+        <form id="registerForm" class="register-form">
+            <div class="form-group">
+                <label for="ridername" class="form-label">骑士ID</label>
+                <input type="text" id="ridername" name="ridername" class="form-input" placeholder="创建你的骑士名称（游戏ID）"
+                    required>
+                <div class="error-message" id="ridernameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">电子邮件</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="输入你的电子邮箱地址" required>
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">秘密口令</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" class="form-input"
+                        placeholder="创建你的秘密口令（至少6个字符）" required>
+                    <button type="button" class="password-toggle" id="passwordToggle">显示</button>
+                </div>
+                <div class="error-message" id="passwordError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword" class="form-label">确认口令</label>
+                <div class="password-container">
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-input"
+                        placeholder="再次输入你的秘密口令" required>
+                    <button type="button" class="password-toggle" id="confirmPasswordToggle">显示</button>
+                </div>
+                <div class="error-message" id="confirmPasswordError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="favoriteMonster" class="form-label">选择你喜爱的怪物</label>
+                <div class="select-wrapper">
+                    <select id="favoriteMonster" name="favoriteMonster" class="monster-select" required>
+                        <option value="" disabled selected>选择一种怪物...</option>
+                        <option value="rathalos">火龙 (Rathalos)</option>
+                        <option value="zinogre">雷狼龙 (Zinogre)</option>
+                        <option value="nargacuga">迅龙 (Nargacuga)</option>
+                        <option value="tigrex">轰龙 (Tigrex)</option>
+                        <option value="barroth">土砂龙 (Barroth)</option>
+                        <option value="mizutsune">水兽 (Mizutsune)</option>
+                        <option value="teostra">炎王龙 (Teostra)</option>
+                    </select>
+                </div>
+                <div class="error-message" id="favoriteMonsterError"></div>
+            </div>
+
+            <div class="guild-terms">
+                <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
+                <span>我已阅读并同意 <a href="#" id="termsLink">《猎人公会条约》</a> 和 <a href="#" id="privacyLink">《隐私保护协议》</a>，
+                    并承诺遵守公会的狩猎准则，保护生态平衡。</span>
+            </div>
+
+            <button type="submit" class="join-button" id="registerButton">
+                <span id="buttonText">加入公会</span>
+            </button>
+        </form>
+
+        <div class="login-link">
+            已有公会账号？<a href="login.html" id="loginLink">返回登录</a>
+        </div>
+    </div>
+
+    <!-- Floating parallax elements -->
+    <div class="parallax-element floating-icon" style="top: 20%; left: 10%;">🐉</div>
+    <div class="parallax-element floating-icon" style="top: 60%; right: 15%;">⚔️</div>
+    <div class="parallax-element floating-icon" style="top: 30%; right: 50%;">🗡️</div>
+    <div class="parallax-element floating-icon" style="bottom: 20%; left: 40%;">🌟</div>
+    <div class="parallax-element floating-icon" style="bottom: 30%; left: 20%;">⚡</div>
+    <div class="parallax-element floating-icon" style="top: 40%; right: 30%;">🔥</div>
+
+    <script>
+        class MonsterHunterRegistration {
+            constructor() {
+                this.form = document.getElementById('registerForm');
+                this.ridernameInput = document.getElementById('ridername');
+                this.emailInput = document.getElementById('email');
+                this.passwordInput = document.getElementById('password');
+                this.confirmPasswordInput = document.getElementById('confirmPassword');
+                this.favoriteMonster = document.getElementById('favoriteMonster');
+                this.termsAgreement = document.getElementById('termsAgreement');
+                this.registerButton = document.getElementById('registerButton');
+                this.buttonText = document.getElementById('buttonText');
+                this.passwordToggle = document.getElementById('passwordToggle');
+                this.confirmPasswordToggle = document.getElementById('confirmPasswordToggle');
+                this.successMessage = document.getElementById('successMessage');
+
+                this.init();
+            }
+
+            init() {
+                this.bindEvents();
+                this.addGameEffects();
+            }
+
+            bindEvents() {
+                this.form.addEventListener('submit', (e) => this.handleJoinGuild(e));
+
+                this.passwordToggle.addEventListener('click', () => this.togglePasswordVisibility(this.passwordInput, this.passwordToggle));
+                this.confirmPasswordToggle.addEventListener('click', () => this.togglePasswordVisibility(this.confirmPasswordInput, this.confirmPasswordToggle));
+
+                this.ridernameInput.addEventListener('input', () => this.clearError('ridername'));
+                this.emailInput.addEventListener('input', () => this.clearError('email'));
+                this.passwordInput.addEventListener('input', () => this.clearError('password'));
+                this.confirmPasswordInput.addEventListener('input', () => this.clearError('confirmPassword'));
+                this.favoriteMonster.addEventListener('change', () => this.clearError('favoriteMonster'));
+
+                document.getElementById('loginLink').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.location.href = 'login.html';
+                });
+
+                // External links
+                document.getElementById('termsLink').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.showTerms();
+                });
+
+                document.getElementById('privacyLink').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    this.showPrivacy();
+                });
+            }
+
+            async handleJoinGuild(e) {
+                e.preventDefault();
+
+                if (this.registerButton.classList.contains('loading')) {
+                    return;
+                }
+
+                const riderName = this.ridernameInput.value.trim();
+                const email = this.emailInput.value.trim();
+                const password = this.passwordInput.value;
+                const confirmPassword = this.confirmPasswordInput.value;
+                const monster = this.favoriteMonster.value;
+                const termsAccepted = this.termsAgreement.checked;
+
+                if (!this.validateGuildRegistration(riderName, email, password, confirmPassword, monster, termsAccepted)) {
+                    return;
+                }
+
+                this.setJoiningState(true);
+
+                try {
+                    // 模拟注册过程
+                    await new Promise(resolve => setTimeout(resolve, 2500));
+
+                    this.showRegistrationSuccess();
+
+                    setTimeout(() => {
+                        window.location.href = 'login.html';
+                    }, 3000);
+
+                } catch (error) {
+                    this.showRegistrationError('general', '连接猎团服务器失败，请稍后重试');
+                } finally {
+                    this.setJoiningState(false);
+                }
+            }
+
+            validateGuildRegistration(riderName, email, password, confirmPassword, monster, termsAccepted) {
+                let isValid = true;
+
+                if (!riderName) {
+                    this.showRegistrationError('ridername', '请创建你的骑士ID');
+                    isValid = false;
+                } else if (riderName.length < 3) {
+                    this.showRegistrationError('ridername', '骑士ID至少需要3个字符');
+                    isValid = false;
+                }
+
+                if (!email) {
+                    this.showRegistrationError('email', '请输入你的电子邮箱');
+                    isValid = false;
+                } else if (!this.isValidEmail(email)) {
+                    this.showRegistrationError('email', '请输入有效的电子邮箱地址');
+                    isValid = false;
+                }
+
+                if (!password) {
+                    this.showRegistrationError('password', '请创建你的秘密口令');
+                    isValid = false;
+                } else if (password.length < 6) {
+                    this.showRegistrationError('password', '秘密口令至少需要6个字符');
+                    isValid = false;
+                }
+
+                if (!confirmPassword) {
+                    this.showRegistrationError('confirmPassword', '请确认你的秘密口令');
+                    isValid = false;
+                } else if (password !== confirmPassword) {
+                    this.showRegistrationError('confirmPassword', '两次输入的口令不一致');
+                    isValid = false;
+                }
+
+                if (!monster) {
+                    this.showRegistrationError('favoriteMonster', '请选择你喜爱的怪物');
+                    isValid = false;
+                }
+
+                if (!termsAccepted) {
+                    alert('请阅读并同意猎人公会章程和随行兽使用条款');
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            showRegistrationError(field, message) {
+                let input;
+                if (field === 'ridername') input = this.ridernameInput;
+                else if (field === 'email') input = this.emailInput;
+                else if (field === 'password') input = this.passwordInput;
+                else if (field === 'confirmPassword') input = this.confirmPasswordInput;
+                else if (field === 'favoriteMonster') input = this.favoriteMonster;
+
+                const errorElement = document.getElementById(field + 'Error');
+
+                if (input) {
+                    input.classList.add('error');
+                }
+
+                if (errorElement) {
+                    errorElement.textContent = message;
+                    errorElement.classList.add('show');
+                }
+
+                // 添加震动效果
+                navigator.vibrate && navigator.vibrate(200);
+            }
+
+            clearError(field) {
+                let input;
+                if (field === 'ridername') input = this.ridernameInput;
+                else if (field === 'email') input = this.emailInput;
+                else if (field === 'password') input = this.passwordInput;
+                else if (field === 'confirmPassword') input = this.confirmPasswordInput;
+                else if (field === 'favoriteMonster') input = this.favoriteMonster;
+
+                const errorElement = document.getElementById(field + 'Error');
+
+                if (input) {
+                    input.classList.remove('error');
+                }
+
+                if (errorElement) {
+                    errorElement.classList.remove('show');
+                }
+            }
+
+            setJoiningState(joining) {
+                if (joining) {
+                    this.registerButton.classList.add('loading');
+                    this.buttonText.textContent = '正在注册中...';
+                    this.registerButton.disabled = true;
+                } else {
+                    this.registerButton.classList.remove('loading');
+                    this.buttonText.textContent = '加入公会';
+                    this.registerButton.disabled = false;
+                }
+            }
+
+            showRegistrationSuccess() {
+                // this.successMessage.classList.add('show');
+                // this.form.style.display = 'none';
+                this.playSuccessEffect();
+            }
+
+            togglePasswordVisibility(input, toggle) {
+                const isPassword = input.type === 'password';
+                input.type = isPassword ? 'text' : 'password';
+                toggle.textContent = isPassword ? '隐藏' : '显示';
+            }
+
+            playSuccessEffect() {
+                // 创建简单的成功视觉效果
+                // const container = document.querySelector('.register-container');
+                // container.style.animation = 'none';
+                // setTimeout(() => {
+                //     container.style.animation = 'successPulse 0.6s ease-out';
+                // }, 10);
+                alert('公会注册成功！\n\n欢迎加入猎人公会，准备迎接你的首只随行兽！');
+            }
+
+            showTerms() {
+                alert('《猎人公会条约》\n\n1. 尊重自然生态，禁止过度狩猎\n2. 遵守任务规则，保证队友安全\n3. 不得将公会技能用于邪恶目的\n4. 分享狩猎资源，协助新人成长');
+            }
+
+            showPrivacy() {
+                alert('《隐私保护协议》\n\n1. 猎人个人信息严格保密\n2. 狩猎数据仅用于任务分配\n3. 不向第三方透露骑士行踪\n4. 随行兽信息归猎人所有');
+            }
+            addGameEffects() {
+                // 添加输入框的游戏风格效果
+                const inputs = document.querySelectorAll('.form-input, .monster-select');
+                inputs.forEach(input => {
+                    input.addEventListener('focus', function () {
+                        this.style.boxShadow = '0 0 25px rgba(255, 204, 0, 0.4), inset 0 1px 3px rgba(0, 0, 0, 0.3)';
+                    });
+
+                    input.addEventListener('blur', function () {
+                        if (!this.value) {
+                            this.style.boxShadow = '';
+                        }
+                    });
+                });
+
+
+                // 添加成功脉冲动画
+                const style = document.createElement('style');
+                style.textContent = `
+          @keyframes successPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); box-shadow: 0 0 50px rgba(255, 204, 0, 0.6); }
+            100% { transform: scale(1); }
+          }
+        `;
+                document.head.appendChild(style);
+            }
+        }
+
+        // 初始化怪物猎人注册系统
+        document.addEventListener('DOMContentLoaded', () => {
+            new MonsterHunterRegistration();
+        });
+
+        // Parallax effect for floating elements
+        window.addEventListener('mousemove', (e) => {
+            const parallaxElements = document.querySelectorAll('.parallax-element');
+            const mouseX = e.clientX / window.innerWidth - 0.5;
+            const mouseY = e.clientY / window.innerHeight - 0.5;
+
+            parallaxElements.forEach((el, index) => {
+                const speed = 20 + (index * 5);
+                const x = mouseX * speed;
+                const y = mouseY * speed;
+                el.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
+</body>
+
+</html>

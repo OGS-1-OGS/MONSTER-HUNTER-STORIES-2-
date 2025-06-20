@@ -1,0 +1,77 @@
+/* 动画相关样式 */
+.is-anim {
+    /* 默认隐藏状态，会被JavaScript控制 */
+    opacity: 0;
+    transform: translateY(40px);
+    will-change: opacity, transform;
+}
+
+/* 动画完成状态 */
+.is-anim.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 针对不同动画类型的样式 */
+[data-anim="elem"] {
+    transition-delay: 0.1s;
+}
+
+[data-anim="image"] {
+    transition-delay: 0.2s;
+}
+
+/* 为不同位置的元素设置不同的延迟，创造级联效果 */
+#firstView .is-anim {
+    transition-delay: 0.1s;
+}
+
+/* 首屏各个元素的特殊处理 */
+#firstView .platform {
+    transition-delay: 0.1s;
+}
+
+#firstView .logo {
+    transition-delay: 0.2s;
+}
+
+#firstView .leadArea {
+    transition-delay: 0.3s;
+}
+
+#firstView .mainTxt {
+    transition-delay: 0.4s;
+}
+
+#firstView .videoArea {
+    transition-delay: 0.5s;
+}
+
+/* 首屏不在动画类中的元素处理 */
+#firstView .mv {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    transition-delay: 0.05s;
+}
+
+#firstView.scrolled .mv {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#news .is-anim {
+    transition-delay: 0.2s;
+}
+
+#about .is-anim {
+    transition-delay: 0.3s;
+}
+
+#game_info .is-anim {
+    transition-delay: 0.15s;
+}
+
+#product .is-anim {
+    transition-delay: 0.25s;
+}

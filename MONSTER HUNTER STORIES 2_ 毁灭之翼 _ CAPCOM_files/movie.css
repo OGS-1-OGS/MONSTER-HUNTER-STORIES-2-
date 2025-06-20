@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+/* --------------------------------
+
+	index
+
+-------------------------------- */
+main {}
+
+@media only screen and (min-width: 1024px) {
+    main {
+        background-image: url(../images/common/bg_game.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+
+#contents .movieIndex_list {
+    display: block;
+    width: 87.467%;
+    margin: 0 auto;
+    padding-top: 20vw;
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .movieIndex_list {
+        width: 75%;
+        padding-top: 3vw;
+        margin: 65px auto 0;
+        max-width: 1366px;
+        min-height: calc(100vh - 145px);
+    }
+}
+
+#contents .movieIndex_list h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+}
+
+#contents .movieIndex_list h3 .ja {
+    color: #452505;
+    font-weight: bold;
+    font-size: 3vw;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.hk #contents .movieIndex_list h3 .ja {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents .movieIndex_list h3 .ja {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .movieIndex_list h3 .ja {
+    font-family: "source-han-serif-korean", serif;
+}
+
+#contents .movieIndex_list h3 .en {
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 9vw;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .movieIndex_list h3 .ja {
+        font-size: 1.25vw;
+    }
+
+    #contents .movieIndex_list h3 .en {
+        font-size: 4.166vw;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #contents .movieIndex_list h3 .ja {
+        font-size: 20px;
+    }
+
+    #contents .movieIndex_list h3 .en {
+        font-size: 62px;
+    }
+}
+
+#contents .movieIndex_list h3::after {
+    content: "";
+    width: 100%;
+    height: 4vw;
+    display: block;
+    background: url(../images/common/deco_element.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 1vw 0 3vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .movieIndex_list h3::after {
+        height: 1.5vw;
+    }
+}
+
+#contents .movieIndex_list .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    color: #422405;
+    font-size: 3.2vw;
+    text-align: center;
+    margin-bottom: 2em;
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+}
+
+.hk #contents .movieIndex_list .lead {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents .movieIndex_list .lead {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .movieIndex_list .lead {
+    font-family: "source-han-serif-korean", serif;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .movieIndex_list .lead {
+        font-size: 2vw;
+    }
+}
+
+
+#contents .movieIndex_list .colBox {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .movieIndex_list .colBox {
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+}
+
+#contents .movieIndex_list .colBox li {
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .movieIndex_list .colBox li {
+        width: calc(94% /3);
+        margin-right: 3%;
+        margin-bottom: 4%;
+    }
+
+    #contents .movieIndex_list .colBox li:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
+#contents .movieIndex_list .colBox li .trailer {
+    width: 100%;
+    margin: 8% auto 6%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .movieIndex_list .colBox li .trailer {
+        width: 100%;
+        margin: 0 0 2vw;
+    }
+}
+
+#contents .movieIndex_list .colBox li .trailer .trailerBox a {
+    display: block;
+    position: relative;
+}
+
+#contents .movieIndex_list .colBox li .trailer .trailerBox a::after {
+    content: "";
+    display: inline-block;
+    background: url("../images/common/icon_play.png") center no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    width: 3.483em;
+    height: 3.483em;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .movieIndex_list .colBox li .trailer .trailerBox a::after {
+        width: 2.483em;
+        height: 2.483em;
+        max-width: 40px;
+        max-height: 40px;
+    }
+}
+
+#contents .movieIndex_list .colBox li figure {
+    width: 100%;
+    padding-top: 56.25%;
+    margin-bottom: 1vw;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #c0ab5a;
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+#contents .movieIndex_list .colBox li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    vertical-align: middle;
+    margin-bottom: 0.1em;
+    transition: all .5s ease;
+    height: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .movieIndex_list .colBox li:hover img {
+        transform: scale(1.05);
+    }
+}
+
+
+#contents .movieIndex_list .colBox li .movie_name {
+    font-weight: bold;
+    font-size: 4vw;
+    line-height: 1.2;
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+    text-align: center;
+}
+
+#contents .movieIndex_list .colBox li .movie_name span {
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hk #contents .movieIndex_list .colBox li .movie_name {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents .movieIndex_list .colBox li .movie_name {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .movieIndex_list .colBox li .movie_name {
+    font-family: "source-han-serif-korean", serif;
+}
+
+
+@media screen and (min-width: 1024px) {
+    #contents .movieIndex_list .colBox li .movie_name {
+        font-size: 1.1vw;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    #contents .movieIndex_list .colBox li .movie_name {
+        font-size: 14px;
+    }
+}
+
+.ratingBox {
+    width: 30vw;
+    margin: 10vw auto;
+}
+
+@media only screen and (min-width: 1024px) {
+    .ratingBox {
+        width: 12vw;
+        margin: 4vw auto;
+    }
+}

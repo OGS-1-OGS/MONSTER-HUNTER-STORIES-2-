@@ -1,0 +1,1478 @@
+@charset "UTF-8";
+
+/* --------------------------------
+
+	index
+
+-------------------------------- */
+main {}
+
+@media only screen and (min-width: 1024px) {
+    main {
+        background-image: url(../images/common/bg_game.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+#contents .monsterIndex_list {
+    display: block;
+    width: 87.467%;
+    margin: 0 auto;
+    padding-top: 20vw;
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monsterIndex_list {
+        width: 75%;
+        margin: 65px auto 0;
+        padding-top: 3vw;
+        max-width: 1366px;
+    }
+}
+
+#contents .monsterIndex_list h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+}
+
+#contents .monsterIndex_list h3 .ja {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+.hk #contents .monsterIndex_list h3 .ja {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents .monsterIndex_list h3 .ja {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .monsterIndex_list h3 .ja {
+    font-family: "source-han-serif-korean", serif;
+}
+
+#contents .monsterIndex_list h3 span::after {
+    content: none;
+}
+
+#contents .monsterIndex_list h3 .en {
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 9vw;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .monsterIndex_list h3 .ja {
+        font-size: 1vw;
+    }
+
+    #contents .monsterIndex_list h3 .en {
+        font-size: 4.166vw;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #contents .monsterIndex_list h3 .ja {
+        font-size: 20px;
+    }
+
+    #contents .monsterIndex_list h3 .en {
+        font-size: 62px;
+    }
+}
+
+#contents .monsterIndex_list h3::after {
+    content: "";
+    width: 100%;
+    height: 4vw;
+    display: block;
+    background: url(../images/common/deco_element.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 1vw 0;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .monsterIndex_list h3::after {
+        height: 1.5vw;
+    }
+}
+
+#contents .monsterIndex_list .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    color: #422405;
+    font-size: 3.2vw;
+    text-align: center;
+    margin-bottom: 2em;
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+}
+
+.hk #contents .monsterIndex_list .lead {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents .monsterIndex_list .lead {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .monsterIndex_list .lead {
+    font-family: "source-han-serif-korean", serif;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .monsterIndex_list .lead {
+        font-size: 2vw;
+    }
+}
+
+#contents .monsterIndex_list .btn_raging_monster {
+    width: 100%;
+    margin: 12vw auto 12vw;
+    position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .monsterIndex_list .btn_raging_monster {
+        width: 38vw;
+        margin: 6vw auto 6vw;
+    }
+
+    .es #contents .monsterIndex_list .btn_raging_monster,
+    .pt-br #contents .monsterIndex_list .btn_raging_monster {
+        width: 48vw;
+    }
+}
+
+#contents .monsterIndex_list .btn_raging_monster .btn_hex {
+    width: 100%;
+    height: 12vw;
+    margin-bottom: 6vw;
+    background: url(../images/common/deco_btn_pattern2.png), url(../images/common/bg_game_btn.png);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    clip-path: polygon(6% 0%, 94% 0%, 100% 50%, 94% 100%, 6% 100%, 0% 50%);
+    padding-left: 15vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .monsterIndex_list .btn_raging_monster .btn_hex {
+        width: 100%;
+        height: 5vw;
+        margin-bottom: 2vw;
+        clip-path: polygon(6% 0%, 94% 0%, 100% 50%, 94% 100%, 6% 100%, 0% 50%);
+        padding-left: 6vw;
+    }
+
+    .es #contents .monsterIndex_list .btn_raging_monster .btn_hex {
+        clip-path: polygon(4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%, 0% 50%);
+    }
+}
+
+#contents .monsterIndex_list .btn_raging_monster .btn_hex span {
+    color: #e3ca68;
+    font-size: 4vw;
+    line-height: 1.2;
+    text-shadow: 0px 0px 5px #000, 0px 0px 5px #000, 0px 0px 5px #000;
+}
+
+#contents .monsterIndex_list .btn_raging_monster .btn_hex.selected span {
+    color: #fff;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monsterIndex_list .btn_raging_monster .btn_hex span {
+        font-size: 1.8vw;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monsterIndex_list .btn_raging_monster .btn_hex:hover {
+        background: url(../images/common/deco_btn_pattern2.png), url(../images/common/bg_hover_btn.png);
+        background-size: contain, cover;
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    #contents .monsterIndex_list .btn_raging_monster .btn_hex:hover span {
+        color: #fff;
+    }
+}
+
+#contents .monsterIndex_list .btn_raging_monster:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url(../images/monster/btn_raging_monster_pic.png) no-repeat;
+    background-size: cover;
+    width: 34vw;
+    height: 20vw;
+    left: 0;
+    transform: translateY(-25%);
+    z-index: 103;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monsterIndex_list .btn_raging_monster:before {
+        width: 15vw;
+        height: 10vw;
+    }
+}
+
+#contents .monsterIndex_list .btn_raging_monster .btn_hex span:after {
+    background: url(../images/common/icon_btn_arrow_down.png) no-repeat;
+    background-size: cover;
+    width: 2vw;
+    height: 1vw;
+    right: 7%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monsterIndex_list .btn_raging_monster .btn_hex span:after {
+        width: 1.5vw;
+        height: 0.8vw;
+    }
+}
+
+.btn_raging_monster .ic.ic_up::before,
+.btn_raging_monster .ic.ic_up::after {
+    left: 0;
+    top: 0;
+}
+
+#contents .monsterIndex_list .colBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monsterIndex_list .colBox {
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+}
+
+#contents .monsterIndex_list .colBox li {
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monsterIndex_list .colBox li {
+        width: 48%;
+        margin-bottom: 4%;
+    }
+}
+
+#contents .monsterIndex_list .colBox li figure {
+    width: 100%;
+    padding-top: 64%;
+    margin-bottom: 1vw;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #c0ab5a;
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+#contents .monsterIndex_list .colBox li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    vertical-align: middle;
+    margin-bottom: 0.1em;
+    transition: all .5s ease;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monsterIndex_list .colBox li:hover img {
+        transform: scale(1.05);
+    }
+}
+
+#contents .monsterIndex_list .colBox li .monster_name {
+    font-family: 'Cormorant Garamond', serif;
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 6vw;
+    line-height: 1.2;
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+}
+
+#contents .monsterIndex_list .colBox li .monster_name span {
+    font-size: 1.2em;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .monsterIndex_list .colBox li .monster_name {
+        font-size: 1.8vw;
+    }
+}
+
+.hk #contents .monsterIndex_list .colBox li .monster_name {
+    font-family: "source-han-serif-tc", "source-han-serif-japanese", serif;
+}
+
+.cn #contents .monsterIndex_list .colBox li .monster_name {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .monsterIndex_list .colBox li .monster_name {
+    font-family: "source-han-serif-korean", serif;
+}
+
+#firstView {
+    background-size: cover;
+    position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+    #firstView {
+        margin-top: 65px;
+    }
+}
+
+#firstView .firstView_inner {
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 15vw;
+    height: calc(100vw * 0.9);
+}
+
+@media screen and (min-width: 1024px) {
+    #firstView .firstView_inner {
+        margin: 0 auto;
+        width: 80%;
+        height: calc(100vw * 0.4);
+        display: flex;
+        padding-top: 0;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#firstView .firstView_inner .pic {
+    width: 100%;
+    position: relative;
+}
+
+@media screen and (max-width: 1023px) {
+    #firstView.monster01 .firstView_inner .pic {
+        width: 140%;
+        left: 3%;
+    }
+
+    #firstView.monster02 .firstView_inner .pic {
+        width: 110%;
+        left: 8%;
+    }
+
+    #firstView.monster03 .firstView_inner .pic {
+        width: 98%;
+        left: -5%;
+    }
+
+    #firstView.monster04 .firstView_inner .pic {
+        width: 125%;
+        left: -18%;
+        top: 2vw;
+    }
+
+    #firstView.monster05 .firstView_inner .pic {
+        width: 142%;
+        top: -12vw;
+        left: -20%;
+    }
+
+    #firstView.monster06 .firstView_inner .pic {
+        width: 70%;
+        top: -8%;
+        left: 10%;
+    }
+
+    #firstView.monster07 .firstView_inner .pic {
+        width: 93%;
+        top: 15%;
+        left: 3%;
+    }
+
+    #firstView.monster08 .firstView_inner .pic {
+        width: 70%;
+        top: -5%;
+        left: 16%;
+    }
+
+    #firstView.monster09 .firstView_inner .pic {
+        width: 75%;
+        top: 0;
+        left: 7%;
+    }
+
+    #firstView.monster10 .firstView_inner .pic {
+        width: 80%;
+        top: -25%;
+        left: 10%;
+    }
+
+    #firstView.monster11 .firstView_inner .pic {
+        width: 122%;
+        top: -18%;
+        left: -6%;
+    }
+
+    #firstView.monster12 .firstView_inner .pic {
+        width: 130%;
+        /* transform: translateX(-15%); */
+        left: -17%;
+    }
+
+    #firstView.monster13 .firstView_inner .pic {
+        width: 120%;
+        left: 8vw;
+    }
+
+    #firstView.monster14 .firstView_inner .pic {
+        top: -32vw;
+        left: 5%;
+    }
+
+    #firstView.monster15 .firstView_inner .pic {}
+
+    #firstView.monster16 .firstView_inner .pic {
+        width: 130%;
+        left: -18%;
+    }
+
+    #firstView.monster17 .firstView_inner .pic {
+        width: 110%;
+        left: -10%;
+    }
+
+    #firstView.monster18 .firstView_inner .pic {
+        width: 110%;
+        left: -10%;
+    }
+
+    #firstView.monster19 .firstView_inner .pic {
+        width: 110%;
+        left: -10%;
+    }
+
+    #firstView.monster20 .firstView_inner .pic {
+        width: 110%;
+        left: -10%;
+    }
+
+    #firstView.monster21 .firstView_inner .pic {
+        width: 110%;
+        left: -10%;
+    }
+
+    #firstView.monster22 .firstView_inner .pic {
+        width: 110%;
+        left: -10%;
+    }
+
+    #firstView.monster23 .firstView_inner .pic {
+        width: 110%;
+        left: -10%;
+    }
+
+    #firstView.monster24 .firstView_inner .pic {
+        width: 110%;
+        left: -10%;
+    }
+
+    #firstView.monster25 .firstView_inner .pic {
+        width: 110%;
+        left: 0;
+    }
+
+    #firstView.monster26 .firstView_inner .pic {
+        width: 130%;
+        left: -15%;
+    }
+
+    #firstView.monster27 .firstView_inner .pic {
+        width: 110%;
+        left: 3%;
+    }
+
+    #firstView.monster28 .firstView_inner .pic {
+        width: 130%;
+        left: -10%;
+    }
+
+    #firstView.monster29 .firstView_inner .pic {
+        width: 110%;
+        left: -5%;
+        top: 8vw;
+    }
+
+    #firstView.monster30 .firstView_inner .pic {
+        width: 120%;
+        left: -5%;
+        top: -6vw;
+    }
+
+    #firstView.monster31 .firstView_inner .pic {
+        width: 90%;
+        left: 10%;
+        top: -2vw;
+    }
+
+    #firstView.monster32 .firstView_inner .pic {
+        width: 110%;
+        left: 2%;
+        top: 3vw;
+    }
+
+    #firstView.monster33 .firstView_inner .pic {
+        width: 150%;
+        left: -10%;
+        top: -20vw;
+    }
+
+    #firstView.monster34 .firstView_inner .pic {
+        width: 120%;
+        top: 5vw;
+    }
+
+    #firstView.monster35 .firstView_inner .pic {
+        width: 170%;
+        left: -30%;
+        top: -25vw;
+    }
+
+    #firstView.monster36 .firstView_inner .pic {
+        width: 150%;
+        left: -45%;
+    }
+
+    #firstView.monster37 .firstView_inner .pic {
+        top: -2vw;
+    }
+
+    #firstView.monster38 .firstView_inner .pic {
+        width: 130%;
+        left: -10%;
+        top: -15vw;
+    }
+
+    #firstView.monster39 .firstView_inner .pic {
+        width: 140%;
+        left: -30%;
+        top: -4vw;
+    }
+
+    #firstView.monster40 .firstView_inner .pic {
+        width: 150%;
+        left: -10%;
+        top: 0;
+    }
+
+    #firstView.monster41 .firstView_inner .pic {
+        width: 125%;
+        left: 0%;
+        top: -70vw;
+    }
+
+    #firstView.monster42 .firstView_inner .pic {
+        width: 125%;
+        left: -18%;
+        top: -40vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #firstView.monster02 .firstView_inner .pic {
+        width: 80%;
+    }
+
+    #firstView.monster03 .firstView_inner .pic {
+        width: 80%;
+    }
+
+    #firstView.monster04 .firstView_inner .pic {
+        width: 95%;
+        top: 2vw;
+    }
+
+    #firstView.monster05 .firstView_inner .pic {
+        width: 95%;
+        top: -1vw;
+    }
+
+    #firstView.monster06 .firstView_inner .pic {
+        width: 45%;
+    }
+
+    #firstView.monster07 .firstView_inner .pic {
+        width: 70%;
+    }
+
+    #firstView.monster08 .firstView_inner .pic {
+        width: 50%;
+    }
+
+    #firstView.monster09 .firstView_inner .pic {
+        width: 54%;
+        top: 1.8vw;
+    }
+
+    #firstView.monster10 .firstView_inner .pic {
+        width: 68%;
+        top: -8.5vw;
+    }
+
+    #firstView.monster11 .firstView_inner .pic {
+        width: 90%;
+        top: -8vw;
+    }
+
+    #firstView.monster12 .firstView_inner .pic {}
+
+    #firstView.monster13 .firstView_inner .pic {
+        width: 90%;
+    }
+
+    #firstView.monster14 .firstView_inner .pic {
+        width: 70%;
+        top: -10vw;
+    }
+
+    #firstView.monster15 .firstView_inner .pic {
+        width: 85%;
+        top: -4vw;
+    }
+
+    #firstView.monster16 .firstView_inner .pic {}
+
+    #firstView.monster17 .firstView_inner .pic {
+        width: 85%;
+        top: -3vw;
+    }
+
+    #firstView.monster18 .firstView_inner .pic {
+        width: 70%;
+    }
+
+    #firstView.monster19 .firstView_inner .pic {
+        width: 90%;
+    }
+
+    #firstView.monster20 .firstView_inner .pic {
+        width: 80%;
+        top: 1.8vw;
+    }
+
+    #firstView.monster21 .firstView_inner .pic {
+        width: 75%;
+        top: 2vw;
+    }
+
+    #firstView.monster22 .firstView_inner .pic {
+        width: 90%;
+        left: -2vw;
+        top: -5vw;
+    }
+
+    #firstView.monster23 .firstView_inner .pic {
+        width: 88%;
+        top: 3vw;
+        left: 4vw;
+    }
+
+    #firstView.monster24 .firstView_inner .pic {
+        width: 92%;
+        top: -4vw;
+        left: 3vw;
+    }
+
+    #firstView.monster25 .firstView_inner .pic {
+        width: 85%;
+        left: 3vw;
+    }
+
+    #firstView.monster26 .firstView_inner .pic {
+        width: 100%;
+        left: -12vw;
+        top: -5vw;
+    }
+
+    #firstView.monster26 .firstView_inner .pic img {
+        width: 130%;
+    }
+
+    #firstView.monster27 .firstView_inner .pic {
+        width: 78%;
+        left: 3vw;
+        top: -1vw;
+    }
+
+    #firstView.monster28 .firstView_inner .pic {
+        width: 90%;
+    }
+
+    #firstView.monster29 .firstView_inner .pic {
+        width: 85%;
+        top: 2vw;
+    }
+
+    #firstView.monster30 .firstView_inner .pic {
+        width: 85%;
+    }
+
+    #firstView.monster31 .firstView_inner .pic {
+        width: 60%;
+        left: 3vw;
+        top: 2.5vw;
+    }
+
+    #firstView.monster32 .firstView_inner .pic {
+        width: 75%;
+        top: 1vw;
+    }
+
+    #firstView.monster33 .firstView_inner .pic {
+        width: 100%;
+        top: -4vw;
+        left: -5vw;
+    }
+
+    #firstView.monster33 .firstView_inner .pic img {
+        width: 130%;
+    }
+
+    #firstView.monster34 .firstView_inner .pic {
+        width: 100%;
+        top: 0;
+    }
+
+    #firstView.monster35 .firstView_inner .pic {
+        width: 100%;
+        top: -4vw;
+        left: -8vw;
+    }
+
+    #firstView.monster35 .firstView_inner .pic img {
+        width: 120%;
+    }
+
+    #firstView.monster36 .firstView_inner .pic {
+        width: 100%;
+        top: 0;
+        left: -8vw;
+    }
+
+    #firstView.monster36 .firstView_inner .pic img {
+        width: 120%;
+    }
+
+    #firstView.monster37 .firstView_inner .pic {
+        width: 60%;
+        top: 0;
+    }
+
+    #firstView.monster38 .firstView_inner .pic {
+        width: 80%;
+        top: -1vw;
+    }
+
+    #firstView.monster41 .firstView_inner .pic {
+        width: 80%;
+        top: -13vw;
+    }
+
+    #firstView.monster42 .firstView_inner .pic {
+        width: 80%;
+        top: -11vw;
+    }
+
+}
+
+#firstView .firstView_inner .caption {
+    margin-bottom: 4vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #firstView .firstView_inner .caption {
+        position: absolute;
+        top: 8%;
+        left: 2%;
+    }
+}
+
+#firstView .firstView_inner .caption h3 {
+    font-family: 'Cormorant Garamond', serif;
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 5vw;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    margin: -5% auto 4vw;
+    text-align: center;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+    position: relative;
+    z-index: 10;
+}
+
+@media screen and (min-width: 1024px) {
+    #firstView .firstView_inner .caption h3 {
+        font-size: 1.8229vw;
+        margin-bottom: 2vw;
+        padding: 0 1em;
+    }
+}
+
+#firstView .firstView_inner .caption h3 .deco {
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 35%;
+    height: 2vw;
+    padding-top: 0.2vw;
+    transform: translateX(-50%);
+}
+
+@media screen and (min-width: 1024px) {
+    #firstView .firstView_inner .caption h3 .deco {
+        width: 60%;
+    }
+}
+
+#firstView .firstView_inner .caption p.detail {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    font-size: 3vw;
+    margin-bottom: 3vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #firstView .firstView_inner .caption p.detail {
+        font-size: 1vw;
+        margin-bottom: 1vw;
+    }
+}
+
+#firstView .firstView_inner .caption p.lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: #452505;
+    font-size: 3.5vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #firstView .firstView_inner .caption p.lead {
+        font-size: 1.25vw;
+    }
+}
+
+.hk #firstView .firstView_inner .caption p.detail,
+.hk #firstView .firstView_inner .caption p.lead {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #firstView .firstView_inner .caption p.detail,
+.cn #firstView .firstView_inner .caption p.lead {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #firstView .firstView_inner .caption p.detail,
+.kr #firstView .firstView_inner .caption p.lead {
+    font-family: "source-han-serif-korean", serif;
+}
+
+/*weapon*/
+#contents {
+    padding-bottom: 6.641vw;
+}
+
+#contents h4 {
+    color: #452505;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    font-size: 6.8vw;
+    margin-bottom: 2vw;
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents h4 {
+        font-size: 3.125vw;
+    }
+}
+
+.hk #contents h4 {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents h4 {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents h4 {
+    font-family: "source-han-serif-korean", serif;
+}
+
+#contents h4 span {
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#contents h4 span::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4vw;
+    padding-top: 2vw;
+    background: url(../images/character/deco_h3_element.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 3vw auto 4vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents h4 span::after {
+        padding-top: 1vw;
+        height: 2vw;
+        margin: 1vw auto 2vw;
+    }
+}
+
+#contents .monster_detail {
+    display: block;
+    width: 87.467%;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail {
+        width: 76.953%;
+        margin: 0 auto;
+        max-width: 1366px;
+    }
+}
+
+#contents .monster_detail .monster_detail_inner {
+    background: url(../images/character/bg_weapon.png) no-repeat;
+    background-size: cover;
+    padding: 12% 8%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .monster_detail_inner {
+        padding: 8% 8% 5%;
+    }
+}
+
+#contents .monster_detail .monster_detail_inner::before {
+    content: "";
+    width: 100%;
+    height: 8vw;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0.5vw;
+    background: url(../images/common/deco1_up.png) no-repeat;
+    background-position: 98% top;
+    background-size: contain;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .monster_detail_inner::before {
+        height: 4vw;
+    }
+}
+
+#contents .monster_detail .monster_detail_inner::after {
+    content: "";
+    width: 100%;
+    height: 8vw;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0.5vw;
+    background: url(../images/common/deco1_down.png) no-repeat;
+    background-position: 2% top;
+    background-size: contain;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .monster_detail_inner::after {
+        height: 4vw;
+    }
+}
+
+#contents .monster_detail .colBox {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .colBox {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+#contents .monster_detail .colBox .info {
+    color: #452505;
+    width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .colBox .info {
+        width: 48%;
+    }
+}
+
+#contents .monster_detail .colBox .info h4.monster_name {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    font-size: 8vw;
+    margin-bottom: 3vw;
+    font-weight: 600;
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: left;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .colBox .info h4.monster_name {
+        font-size: 3.6vw;
+        margin-bottom: 1vw;
+    }
+}
+
+.hk #contents .monster_detail .colBox .info h4.monster_name {
+    font-family: "source-han-serif-tc", "source-han-serif-japanese", serif;
+}
+
+.cn #contents .monster_detail .colBox .info h4.monster_name {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .monster_detail .colBox .info h4.monster_name {
+    font-family: "source-han-serif-korean", serif;
+}
+
+#contents .monster_detail .colBox .info h4.monster_name .small {
+    font-size: 4vw;
+    margin-bottom: 1vw;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .colBox .info h4.monster_name .small {
+        font-size: 2.3041vw;
+        margin-bottom: 0.6vw;
+    }
+}
+
+#contents .monster_detail .colBox .info h4.monster_name p {
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#contents .monster_detail .colBox .info .text {
+    font-size: 3vw;
+    line-height: 1.8;
+    margin-bottom: 3vw;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .colBox .info .text {
+        font-size: 1vw;
+        margin-bottom: 1vw;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    #contents .monster_detail .colBox .info .text {
+        font-size: 16px;
+    }
+}
+
+#contents .monster_detail .colBox .info .text .ttl {
+    width: auto;
+    display: table-cell;
+    background: #422405;
+    color: #fff;
+    padding: 0.2em 1em;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .colBox .info .text .ttl {}
+}
+
+#contents .monster_detail .colBox .info .text p {
+    margin-bottom: 1em;
+}
+
+#contents .monster_detail .colBox .detail_slider {
+    width: 100%;
+    position: relative;
+    margin-bottom: 12vw;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .colBox .detail_slider {
+        width: 40%;
+        margin-bottom: 2vw;
+    }
+}
+
+#contents .monster_detail .colBox .detail_slider .technique_name {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5vw;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    text-align: center;
+    line-height: 1.2;
+}
+
+#contents .monster_detail .colBox .detail_slider .technique_name span {
+    color: #452505;
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .colBox .detail_slider .technique_name {
+        font-size: 1.36666vw;
+    }
+
+    #contents .monster_detail .colBox .detail_slider .technique_name.small {
+        font-size: 1.16666vw;
+    }
+
+    #contents .monster_detail .colBox .info h4.monster_name .name.fsmall {
+        font-size: 3vw;
+    }
+}
+
+.hk #contents .monster_detail .colBox .detail_slider .technique_name {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents .monster_detail .colBox .detail_slider .technique_name {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .monster_detail .colBox .detail_slider .technique_name {
+    font-family: "source-han-serif-korean", serif;
+}
+
+#contents .monster_detail .colBox .detail_slider .swiper-slide figure {
+    border: 2px solid #c0ab5a;
+}
+
+#contents .monster_detail .colBox .detail_slider .swiper-slide figure img {
+    vertical-align: middle;
+}
+
+#contents .monster_detail .colBox .pic {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .colBox .pic {}
+
+    #contents .monster_detail .colBox .pic.only2 {
+        justify-content: center;
+    }
+}
+
+#contents .monster_detail .colBox .pic figure {
+    width: 90%;
+    border: 2px solid #c0ab5a;
+    margin: 0 auto 4%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_detail .colBox .pic figure {
+        width: 31%;
+        margin: 2vw 0;
+    }
+
+    #contents .monster_detail .colBox .pic.only2 figure {
+        margin: 2vw 1vw;
+    }
+}
+
+#contents .monster_detail .colBox .pic figure img {
+    vertical-align: middle;
+}
+
+#contents .monster_list {
+    display: block;
+    width: 89.467%;
+    margin: 12vw auto 0;
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_list {
+        width: 75%;
+        margin: 6.641vw auto 0;
+    }
+}
+
+#contents .monster_list .colBox {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_list .colBox {
+        margin: 0 auto;
+        min-width: 800px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+#contents .monster_list .colBox li {
+    width: 31%;
+    margin: 1%;
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_list .colBox li {
+        width: 14.6%;
+        margin: 1%;
+    }
+}
+
+#contents .monster_list .colBox li img {
+    transition: all .5s ease;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .monster_list .colBox li:hover img {
+        transform: scale(1.2);
+    }
+}
+
+#contents .monster_list .colBox li img {
+    vertical-align: middle;
+}
+
+/*animation*/
+body .monster_detail[data-anim="elem"] {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+body .monster_detail.is-anim[data-anim="elem"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#contents .raging_monster {
+    display: block;
+    width: 87.467%;
+    margin: 12vw auto 0;
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .raging_monster {
+        width: 76.953%;
+        margin: 4vw auto 0;
+    }
+}
+
+#contents .raging_monster h4 span::after {
+    content: none;
+}
+
+#contents .raging_monster h4::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4vw;
+    padding-top: 2vw;
+    background: url(../images/character/deco_h3_element.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 3vw auto 4vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .raging_monster h4::after {
+        padding-top: 1vw;
+        height: 2vw;
+        margin: 1vw auto 2vw;
+    }
+}
+
+#contents .raging_monster .raging_monster_inner {
+    background: url(../images/common/bg_product.jpg);
+    background-repeat: repeat-y;
+    padding: 5% 8% 14%;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 16px -2px rgba(10, 10, 10, 0.1), 0px 0px 15px -3px rgba(10, 10, 10, 0.5);
+    position: relative;
+    margin-bottom: 6vw;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .raging_monster .raging_monster_inner {
+        margin-bottom: 4vw;
+        padding: 0 8% 6%;
+    }
+}
+
+#contents .raging_monster .raging_monster_inner::before {
+    content: "";
+    width: 100%;
+    height: 10vw;
+    display: block;
+    position: absolute;
+    right: 2%;
+    top: 2vw;
+    background: url(../images/common/deco1_up.png) no-repeat;
+    background-position: right top;
+    background-size: contain;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .raging_monster .raging_monster_inner::before {
+        height: 4vw;
+        top: 0.5vw;
+    }
+}
+
+#contents .raging_monster .raging_monster_inner::after {
+    content: "";
+    width: 100%;
+    height: 10vw;
+    display: block;
+    position: absolute;
+    left: 2%;
+    bottom: 2vw;
+    background: url(../images/common/deco1_down.png) no-repeat;
+    background-position: left top;
+    background-size: contain;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .raging_monster .raging_monster_inner::after {
+        height: 4vw;
+        bottom: 0.5vw;
+    }
+}
+
+#contents .raging_monster_inner .main_pic {
+    width: 140%;
+    transform: translateX(-15%);
+}
+
+#contents .raging_monster_inner .pic {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .raging_monster_inner .pic {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+#contents .raging_monster_inner .pic figure {
+    width: 100%;
+    border: 2px solid #c0ab5a;
+    margin-bottom: 4%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .raging_monster_inner .pic figure {
+        width: 48%;
+        margin: 0 0 2vw;
+    }
+}
+
+#contents .raging_monster_inner .pic figure img {
+    vertical-align: middle;
+}
+
+#contents .raging_monster_inner .text {
+    font-size: 3vw;
+    line-height: 1.8;
+    margin-bottom: 3vw;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .raging_monster_inner .text {
+        font-size: 1vw;
+        min-height: 7em;
+    }
+}

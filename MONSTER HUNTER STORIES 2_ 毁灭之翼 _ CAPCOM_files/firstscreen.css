@@ -1,0 +1,75 @@
+/**
+ * 首屏专用样式
+ * 使用!important确保最高优先级
+ */
+
+/* 初始状态 - 隐藏所有元素 */
+#firstView.animation-ready .contsInner>* {
+    opacity: 0 !important;
+    transform: translateY(40px) !important;
+    transition: opacity 1.2s ease, transform 1.2s ease !important;
+}
+
+/* 滚动后显示 */
+#firstView.scrolled .contsInner>* {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* 背景特殊处理 */
+#firstView .mv {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+    transition: opacity 1.2s ease, transform 1.2s ease !important;
+}
+
+#firstView.scrolled .mv {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* 针对特定元素的细节调整 */
+#firstView .logo {
+    will-change: opacity, transform;
+}
+
+#firstView .platform {
+    will-change: opacity, transform;
+}
+
+#firstView .leadArea {
+    will-change: opacity, transform;
+}
+
+#firstView .mainTxt {
+    will-change: opacity, transform;
+}
+
+#firstView .videoArea {
+    will-change: opacity, transform;
+}
+
+/* 手动控制各元素的延迟时间 */
+#firstView .platform {
+    transition-delay: 0.1s !important;
+}
+
+#firstView .logo {
+    transition-delay: 0.2s !important;
+}
+
+#firstView .leadArea {
+    transition-delay: 0.3s !important;
+}
+
+#firstView .mainTxt {
+    transition-delay: 0.4s !important;
+}
+
+#firstView .videoArea {
+    transition-delay: 0.5s !important;
+}
+
+#firstView .btn_buy {
+    transition-delay: 0.6s !important;
+}

@@ -1,0 +1,1197 @@
+@charset "UTF-8";
+
+/* --------------------------------
+
+	index
+
+-------------------------------- */
+
+@media only screen and (min-width: 1024px) {
+    main {
+        background-image: url(../images/common/bg_game.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+#contents .firstView {
+    padding-top: calc(65px + 3vw);
+    background: url(../images/system/pic_firstview.png) #fff no-repeat;
+    background-size: cover;
+    height: 100vw;
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .firstView {
+        background: url(../images/system/bg_firstview.jpg) #fff no-repeat;
+        background-size: cover;
+        background-position: 50% 2vw;
+        height: 44.0104vw;
+    }
+}
+
+#contents .firstView h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+    position: relative;
+    z-index: 101;
+}
+
+#contents .firstView h3 .ja {
+    color: #452505;
+    font-weight: bold;
+    font-size: 3vw;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.cn #contents .firstView h3 .ja {
+    font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk #contents .firstView h3 .ja {
+    font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr #contents .firstView h3 .ja {
+    font-family: "source-han-serif-korean", serif !important;
+}
+
+#contents .firstView h3 .en {
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 9vw;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+}
+
+.fr #contents .firstView h3 .en {
+    font-size: 8vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .firstView h3 .ja {
+        font-size: 1.25vw;
+    }
+
+    #contents .firstView h3 .en {
+        font-size: 4.166vw;
+    }
+
+    .fr #contents .firstView h3 .en {
+        font-size: 4.166vw;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #contents .firstView h3 .ja {
+        font-size: 20px;
+    }
+
+    #contents .firstView h3 .en {
+        font-size: 62px;
+    }
+}
+
+#contents .firstView h3::after {
+    content: "";
+    width: 100%;
+    height: 4vw;
+    display: block;
+    background: url(../images/common/deco_element.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 2vw 0;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .firstView h3::after {
+        height: 1.5vw;
+        margin: 1vw 0;
+    }
+}
+
+#contents h4 {
+    color: #452505;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    font-size: 6vw;
+    margin-bottom: 2vw;
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+    text-align: center;
+}
+
+.cn #contents h4 {
+    font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk #contents h4 {
+    font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr #contents h4 {
+    font-family: "source-han-serif-korean", serif !important;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents h4 {
+        font-size: 2.625vw;
+    }
+}
+
+#contents h4 span {
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#contents h4::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4vw;
+    padding-top: 2vw;
+    background: url(../images/character/deco_h3_element.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 3vw auto 4vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents h4::after {
+        padding-top: 1vw;
+        height: 2vw;
+        margin: 1vw auto 2vw;
+    }
+}
+
+#contents .firstView .pic {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -18vw;
+    z-index: 100;
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .firstView .pic {
+        width: 105%;
+        bottom: -6vw;
+    }
+}
+
+#contents .firstView .lead {
+    font-family: 'Cormorant Garamond', serif;
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    color: #452505;
+    font-size: 4vw;
+    text-align: center;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+    margin-bottom: 6vw;
+}
+
+.cn #contents .firstView .lead {
+    font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk #contents .firstView .lead {
+    font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr #contents .firstView .lead {
+    font-family: "source-han-serif-korean", serif !important;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .firstView .lead {
+        font-size: 2vw;
+        margin-bottom: 3vw;
+    }
+}
+
+#contents .weapon {
+    display: block;
+    width: 87.467%;
+    margin: 12vw auto 0;
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon {
+        width: 76.953%;
+        margin: 6.641vw auto 0;
+        max-width: 1366px;
+    }
+}
+
+#contents .weapon .weapon_inner {
+    background: url(../images/character/bg_weapon.png) no-repeat;
+    background-size: cover;
+    padding: 8% 8% 15%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .weapon_inner {
+        background: url(../images/character/bg_weapon.png) no-repeat;
+        background-size: cover;
+        padding: 5% 8%;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.15);
+        position: relative;
+    }
+}
+
+#contents .weapon .weapon_inner::before {
+    content: "";
+    width: 100%;
+    height: 8vw;
+    display: block;
+    position: absolute;
+    right: 2%;
+    top: 0.5vw;
+    background: url(../images/common/deco1_up.png) no-repeat;
+    background-position: right top;
+    background-size: contain;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .weapon_inner::before {
+        height: 4vw;
+    }
+}
+
+#contents .weapon .weapon_inner::after {
+    content: "";
+    width: 100%;
+    height: 8vw;
+    display: block;
+    position: absolute;
+    left: 2%;
+    bottom: 0.5vw;
+    background: url(../images/common/deco1_down.png) no-repeat;
+    background-position: left top;
+    background-size: contain;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .weapon_inner::after {
+        height: 4vw;
+    }
+}
+
+#contents .weapon .weapon_type {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4vw;
+    position: relative;
+    z-index: 11;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .weapon_type {
+        width: 50%;
+        margin-bottom: 2vw;
+    }
+}
+
+#contents .weapon .weapon_type li {}
+
+#contents .weapon .weapon_type li a {
+    width: 12vw;
+    height: 12vw;
+    background: url(../images/character/bg_icon_weapon.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .weapon_type li a {
+        width: 5vw;
+        height: 5vw;
+        cursor: pointer;
+    }
+}
+
+#contents .weapon .weapon_type li a.selected {
+    width: 12vw;
+    height: 12vw;
+    background: url(../images/character/bg_icon_weapon_selected.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .weapon_type li a.selected {
+        width: 5vw;
+        height: 5vw;
+    }
+}
+
+#contents .weapon .weapon_type li a img {
+    width: auto !important;
+    height: 10vw !important;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .weapon_type li a img {
+        width: auto !important;
+        height: 3.8vw !important;
+    }
+}
+
+#contents .weapon .colBox {
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .colBox {
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: stretch;
+    }
+}
+
+#contents .weapon .colBox.active {
+    display: flex;
+}
+
+#contents .weapon .colBox .info {
+    color: #452505;
+    width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .colBox .info {
+        width: 50%;
+    }
+}
+
+#contents .weapon .colBox .info .weapon_name {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 7vw;
+    margin-bottom: 4vw;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.hk #contents .weapon .colBox .info .weapon_name {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents .weapon .colBox .info .weapon_name {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .weapon .colBox .info .weapon_name {
+    font-family: "source-han-serif-korean", serif;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .colBox .info .weapon_name {
+        font-size: 3.8vw;
+        margin-bottom: 0.3em;
+    }
+}
+
+#contents .weapon .colBox .info .text {
+    font-size: 3vw;
+    line-height: 1.6;
+    margin-bottom: 0.2em;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .colBox .info .text {
+        font-size: 1vw;
+        min-height: 13em;
+    }
+
+    .hk #contents .weapon .colBox .info .text,
+    .cn #contents .weapon .colBox .info .text,
+    .kr #contents .weapon .colBox .info .text {
+        font-size: 1vw;
+        min-height: 8em;
+    }
+}
+
+#contents .weapon .colBox .detail_slider {
+    position: relative;
+    margin-bottom: 2vw;
+}
+
+#contents .weapon .colBox .detail_slider .swiper-slide figure {
+    border: 2px solid #c0ab5a;
+}
+
+#contents .weapon .colBox .detail_slider .swiper-slide figure img {
+    vertical-align: middle;
+}
+
+#contents .weapon .colBox .pic {
+    width: 120%;
+    position: relative;
+    display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .colBox .pic {
+        width: 45%;
+    }
+}
+
+#contents .weapon .colBox .pic figure {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1023px) {
+    #contents .weapon .colBox .pic figure {
+        display: block;
+        width: 110%;
+        z-index: 10;
+    }
+
+    #contents .weapon .colBox.great_sword .pic figure {
+        margin-top: -10vw;
+        transform: translateX(4%);
+    }
+
+    #contents .weapon .colBox.sword_shield .pic figure {
+        width: 92%;
+        transform: translateX(-2%);
+    }
+
+    #contents .weapon .colBox.hunmmer .pic figure {
+        transform: translateX(-12%);
+    }
+
+    #contents .weapon .colBox.hunting_horn .pic figure {
+        transform: translateX(-12%);
+    }
+
+    #contents .weapon .colBox.bow .pic figure {
+        width: 145%;
+        margin-top: -10%;
+        transform: translate(-20%);
+    }
+
+    #contents .weapon .colBox.gunlance .pic figure {
+        width: 125%;
+        margin-top: -40vw;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .weapon .colBox .pic figure {
+        display: block;
+        position: absolute;
+        left: 2vw;
+        bottom: 1vw;
+        width: 170%;
+    }
+
+    #contents .weapon .colBox.sword_shield .pic figure {
+        width: 130%;
+    }
+
+    #contents .weapon .colBox.hunmmer .pic figure {
+        left: -5vw;
+        bottom: 2vw;
+        width: 160%;
+    }
+
+    #contents .weapon .colBox.hunting_horn .pic figure {
+        width: 165%;
+        left: -8vw;
+    }
+
+    #contents .weapon .colBox.bow .pic figure {
+        width: 220%;
+        left: -12vw;
+        bottom: 2vw;
+    }
+
+    #contents .weapon .colBox.gunlance .pic figure {
+        width: 220%;
+        left: 1vw;
+        bottom: 0vw;
+    }
+}
+
+#contents .weapon h5 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4vw;
+    margin-bottom: .5em;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.cn #contents .weapon h5 {
+    font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk #contents .weapon h5 {
+    font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr #contents .weapon h5 {
+    font-family: "source-han-serif-korean", serif !important;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .weapon h5 {
+        font-size: 1.4vw;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    #contents .weapon h5 {
+        font-size: 22px;
+    }
+}
+
+#contents .system {
+    display: block;
+    width: 87.467%;
+    margin: 12vw auto 0;
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system {
+        width: 76.953%;
+        margin: 6.641vw auto 0;
+        max-width: 1366px;
+    }
+}
+
+#contents .system .system_inner {
+    background: url(../images/common/bg_product.jpg);
+    background-repeat: repeat-y;
+    padding: 15% 8% 14%;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 16px -2px rgba(10, 10, 10, 0.1), 0px 0px 15px -3px rgba(10, 10, 10, 0.5);
+    position: relative;
+    margin-bottom: 6vw;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system .system_inner {
+        margin-bottom: 4vw;
+        padding: 7% 8% 6%;
+    }
+}
+
+#contents .system .system_inner::before {
+    content: "";
+    width: 100%;
+    height: 10vw;
+    display: block;
+    position: absolute;
+    right: 2%;
+    top: 2vw;
+    background: url(../images/common/deco1_up.png) no-repeat;
+    background-position: right top;
+    background-size: contain;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system .system_inner::before {
+        height: 4vw;
+        top: 0.5vw;
+    }
+}
+
+#contents .system .system_inner::after {
+    content: "";
+    width: 100%;
+    height: 10vw;
+    display: block;
+    position: absolute;
+    left: 2%;
+    bottom: 2vw;
+    background: url(../images/common/deco1_down.png) no-repeat;
+    background-position: left top;
+    background-size: contain;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system .system_inner::after {
+        height: 4vw;
+        bottom: 0.5vw;
+    }
+}
+
+#contents .system_inner .btn_youtube {
+    width: 100%;
+    margin: 6vw auto 10vw;
+}
+
+#contents .system_inner .btn_youtube .btn_store {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_inner .btn_youtube {
+        width: 50%;
+        margin: 2vw auto 3vw;
+    }
+}
+
+#contents .system_inner .btn_wrap {
+    width: 35%;
+    margin-bottom: 1.5em;
+}
+
+/*Category*/
+#contents .system_category {
+    width: 87.467%;
+    margin: 15vw auto 0;
+    filter: drop-shadow(0 0 6px rgba(0 0 0 / 30%));
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_category {
+        width: 69.79%;
+        margin: 6vw auto 0;
+    }
+}
+
+#contents .system_category .system_nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 6vw 0;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_category .system_nav {
+        justify-content: center;
+        margin: 2vw 0;
+    }
+}
+
+#contents .system_category .system_nav li {
+    width: 49%;
+    margin-bottom: 3vw;
+    filter: drop-shadow(0 0 6px rgba(0 0 0 / 15%));
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_category .system_nav li {
+        width: 30%;
+        margin: 1%;
+    }
+}
+
+#contents .system_category .system_nav .ic.ic_up::before,
+#contents .system_category .system_nav .ic.ic_up::after {
+    top: -2px;
+    left: -5px;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #contents .system_category .system_nav .ic.ic_up::before,
+    #contents .system_category .system_nav .ic.ic_up::after {
+        top: 0;
+        left: 0;
+    }
+}
+
+#contents .system_category .system_nav li .btn_hex {
+    font-family: 'Cormorant Garamond', serif;
+    width: 100%;
+    margin: 0;
+    background: url(../images/common/deco_btn_pattern2.png), url(../images/common/bg_game_btn.png);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    clip-path: polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_category .system_nav li .btn_hex {
+        height: 4vw;
+        clip-path: polygon(9% 0%, 91% 0%, 100% 50%, 91% 100%, 9% 100%, 0% 50%);
+    }
+}
+
+#contents .system_category .system_nav li .btn_hex.selected {
+    background: url(../images/common/deco_btn_pattern2.png), url(../images/common/bg_hover_btn.png);
+    background-size: contain, cover;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_category .system_nav li .btn_hex:hover {
+        background: url(../images/common/deco_btn_pattern2.png), url(../images/common/bg_hover_btn.png);
+        background-size: contain, cover;
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    #contents .system_category .system_nav li .btn_hex:hover span {
+        color: #fff;
+    }
+}
+
+#contents .system_category .system_nav li .btn_hex span {
+    color: #e3ca68;
+    font-size: 2.8vw;
+    line-height: 1.2;
+    text-shadow: 0px 0px 5px #000, 0px 0px 5px #000, 0px 0px 5px #000;
+}
+
+.hk #contents .system_category .system_nav li .btn_hex span,
+.cn #contents .system_category .system_nav li .btn_hex span,
+.kr #contents .system_category .system_nav li .btn_hex span {
+    font-size: 2.4vw;
+}
+
+#contents .system_category .system_nav li .btn_hex.selected span {
+    color: #fff;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_category .system_nav li .btn_hex span {
+        font-size: 1.4vw;
+        font-weight: 500;
+    }
+
+    .hk #contents .system_category .system_nav li .btn_hex span,
+    .cn #contents .system_category .system_nav li .btn_hex span,
+    .kr #contents .system_category .system_nav li .btn_hex span {
+        font-size: 1.2vw;
+    }
+
+}
+
+@media only screen and (min-width: 1600px) {
+    #contents .system_category .system_nav li .btn_hex span {
+        font-size: 22px;
+    }
+
+    #contents .system_category .system_nav li .btn_hex span {
+        font-size: 22px;
+    }
+}
+
+#contents .system_category .system_nav li .btn_hex span:after {
+    background: url(../images/common/icon_btn_arrow_down.png) no-repeat;
+    background-size: cover;
+    width: 2vw;
+    height: 1vw;
+    right: 7%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_category .system_nav li .btn_hex span:after {
+        width: 1.1vw;
+        height: 0.6vw;
+    }
+}
+
+#contents .system_inner .system_nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 6vw 0;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_inner .system_nav {
+        justify-content: center;
+        margin: 2vw 0;
+    }
+}
+
+#contents .system_inner .system_nav li {
+    width: 49%;
+    margin-bottom: 3vw;
+    filter: drop-shadow(0 0 6px rgba(0 0 0 / 15%));
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_inner .system_nav li {
+        width: 32%;
+        margin: 0.5%;
+    }
+}
+
+#contents .system_inner .system_nav li .btn_ellipse {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    width: 100%;
+    height: 8vw;
+    font-size: 3.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    background: url(../images/system/bg_ellipse_btn.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: background .2s ease-out;
+}
+
+.cn #contents .system_inner .system_nav li .btn_ellipse {
+    font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk #contents .system_inner .system_nav li .btn_ellipse {
+    font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr #contents .system_inner .system_nav li .btn_ellipse {
+    font-family: "source-han-serif-korean", serif !important;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_inner .system_nav li .btn_ellipse {
+        width: 100%;
+        height: 4.9479vw;
+        margin: 0 auto;
+    }
+}
+
+#contents .system_inner .system_nav li .btn_ellipse.selected {
+    background: url(../images/system/bg_ellipse_btn_selected.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_inner .system_nav li .btn_ellipse:hover {
+        background: url(../images/system/bg_ellipse_btn_hover.png);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    #contents .system_inner .system_nav li .btn_ellipse.selected:hover {
+        background: url(../images/system/bg_ellipse_btn_selected.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #contents .system_inner .system_nav li .btn_ellipse:hover span {
+        color: #fff;
+    }
+}
+
+#contents .system_inner .system_nav li .btn_ellipse span {
+    color: #e3ca68;
+    font-size: 2.8vw;
+    line-height: 1.2;
+    text-shadow: 0px 0px 5px #000, 0px 0px 5px #000, 0px 0px 5px #000;
+}
+
+#contents .system_inner .system_nav li .btn_ellipse.selected span {
+    color: #fff;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_inner .system_nav li .btn_ellipse span {
+        font-size: 1.4vw;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    #contents .system_inner .system_nav li .btn_ellipse span {
+        font-size: 22px;
+    }
+}
+
+#contents .system_inner .system_nav li .btn_ellipse span:after {
+    background: url(../images/common/icon_btn_arrow_down.png) no-repeat;
+    background-size: cover;
+    width: 2vw;
+    height: 1vw;
+    right: 7%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_inner .system_nav li .btn_ellipse span:after {
+        width: 1.1vw;
+        height: 0.6vw;
+    }
+}
+
+#contents .system_inner .system_tab {
+    display: none;
+}
+
+#contents h5 {
+    font-weight: bold;
+    color: #452505;
+    font-size: 5vw;
+    text-align: center;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+    margin: 6vw 0 4vw;
+    z-index: 15;
+    position: relative;
+}
+
+#contents h5 span {
+    font-family: 'Cormorant Garamond', serif;
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cn #contents h5 span {
+    font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk #contents h5 span {
+    font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr #contents h5 span {
+    font-family: "source-han-serif-korean", serif !important;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents h5 {
+        font-size: 2.4vw;
+        margin: 2vw 0;
+    }
+}
+
+#contents .system_tab .lead {
+    font-weight: bold;
+    color: #452505;
+    font-size: 3.8vw;
+    margin: 0 0 4vw;
+}
+
+#contents .system_tab .lead span {
+    font-family: 'Cormorant Garamond', serif;
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cn #contents .system_tab .lead span {
+    font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk #contents .system_tab .lead span {
+    font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr #contents .system_tab .lead span {
+    font-family: "source-han-serif-korean", serif !important;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .system_tab .lead {
+        font-size: 1.8vw;
+        margin: 0 0 1vw;
+    }
+}
+
+#contents .system_inner .system_tab.active {
+    display: block;
+}
+
+#contents .system_inner #system05_tab02 .right.pic figure:first-child {
+    margin-bottom: 6.2vw;
+    position: relative;
+}
+
+#contents .system_inner #system05_tab02 .right.pic figure:first-child::after {
+    content: "";
+    position: absolute;
+    bottom: -6vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    background: url("../images/common/icon_btn_arrow_down_brw.png") no-repeat;
+    background-size: contain;
+    width: 6vw;
+    height: 4vw;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_inner #system05_tab02 .left {
+        width: 50%;
+        z-index: 11;
+        position: relative;
+    }
+
+    #contents .system_inner #system05_tab02 .right.pic {
+        width: 45%;
+        flex-direction: column;
+    }
+
+    #contents .system_inner #system05_tab02 .left img {
+        transform: scale(1.1) translate(1%, -5%);
+    }
+
+    #contents .system_inner #system05_tab02 .right.pic figure {
+        width: 100%;
+    }
+
+    #contents .system_inner #system05_tab02 .right.pic figure:first-child {
+        margin-bottom: 3.2vw;
+        position: relative;
+    }
+
+    #contents .system_inner #system05_tab02 .right.pic figure:first-child::after {
+        content: "";
+        position: absolute;
+        bottom: -3vw;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        background: url("../images/common/icon_btn_arrow_down_brw.png") no-repeat;
+        background-size: contain;
+        width: 3.2vw;
+        height: 2vw;
+    }
+}
+
+#contents .system_inner h5 {}
+
+#contents .system_inner .pic {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_inner .pic {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+#contents .system_inner .pic figure {
+    width: 100%;
+    border: 2px solid #c0ab5a;
+    margin-bottom: 4%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_inner .pic figure {
+        width: 48%;
+        margin: 0 0 2vw;
+    }
+}
+
+#contents .system_inner .pic figure img {
+    vertical-align: middle;
+}
+
+#contents .system_inner .text {
+    font-size: 3vw;
+    line-height: 1.8;
+    margin-bottom: 3vw;
+}
+
+
+#contents .system_inner .text p {
+    margin-bottom: 1em;
+}
+
+.hk #contents .system_inner .text p,
+.cn #contents .system_inner .text p,
+.kr #contents .system_inner .text p {
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_inner .text {
+        font-size: 1vw;
+        min-height: 7em;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .system_inner .text.flex_box_2col {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #contents .system_inner .text.flex_box_2col figure {
+        width: 35%;
+    }
+
+    #contents .system_inner .text.flex_box_2col div {
+        width: 60%;
+    }
+}
+
+/*animation*/
+body .firstView .pic[data-anim="elem"] {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+body .firstView .pic.is-anim[data-anim="elem"] {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.add_date {
+    font-weight: bold;
+}

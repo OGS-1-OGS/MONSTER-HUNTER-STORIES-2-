@@ -1,0 +1,39 @@
+<svg id="btn_on" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="345" height="85" viewBox="0 0 345 85">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-opacity: 0;
+        stroke: #e3ca68;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        filter: url(#filter);
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #e3ca68;
+      }
+    </style>
+    <filter id="filter" x="789" y="2469" width="343" height="83" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.646"/>
+      <feFlood result="flood" flood-opacity="0.7"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+      <feGaussianBlur result="blur-2" stdDeviation="2.646" in="SourceAlpha"/>
+      <feFlood result="flood-2" flood-opacity="0.7"/>
+      <feComposite result="composite-2" operator="out" in2="blur-2"/>
+      <feOffset result="offset-2"/>
+      <feComposite result="composite-3" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend-2" in2="blend"/>
+    </filter>
+  </defs>
+  <g transform="translate(-788 -2468)" style="fill: ; filter: url(#filter)">
+    <path id="長方形_1367" data-name="長方形 1367" class="cls-1" d="M828.572,2544.84l-33.563-34.39,32.413-35.33,263.978-.13,33.59,34.53-32.44,35.47Z" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use transform="translate(-788 -2468)" xlink:href="#長方形_1367" style="stroke: #e3ca68; filter: none; fill: none"/>
+  <path id="三角_右" data-name="三角＿右" class="cls-2" d="M1090.83,2509.77l-6.64,6.63v4.4l11.81-11.03-11.81-10.57v4.53Zm-6.83,4.19,4.49-4.19-4.46-3.99Z" transform="translate(-788 -2468)"/>
+</svg>

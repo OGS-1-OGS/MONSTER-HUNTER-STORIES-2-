@@ -1,0 +1,549 @@
+@charset "UTF-8";
+
+/* --------------------------------
+
+	index
+
+-------------------------------- */
+main {}
+
+@media only screen and (min-width: 1024px) {
+    main {
+        background-image: url(../images/common/bg_game.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+#contents .firstView {
+    padding-top: 21vw;
+    background: url(../images/field/bg_firstview.jpg) #fff no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vw;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .firstView {
+        padding-top: calc(65px + 3vw);
+        background: url(../images/field/bg_firstview.jpg) #fff no-repeat;
+        background-size: cover;
+        background-position-y: 3.5vw;
+        height: 44.0104vw;
+    }
+}
+
+#contents .firstView h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+}
+
+#contents .firstView h3 .ja {
+    color: #452505;
+    font-weight: bold;
+    font-size: 3vw;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.hk #contents .firstView h3 .ja {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents .firstView h3 .ja {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .firstView h3 .ja {
+    font-family: "source-han-serif-korean", serif;
+}
+
+#contents .firstView h3 .en {
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 9vw;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .firstView h3 .ja {
+        font-size: 1.25vw;
+    }
+
+    #contents .firstView h3 .en {
+        font-size: 4.166vw;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #contents .firstView h3 .ja {
+        font-size: 20px;
+    }
+
+    #contents .firstView h3 .en {
+        font-size: 62px;
+    }
+}
+
+#contents .firstView h3::after {
+    content: "";
+    width: 100%;
+    height: 4vw;
+    display: block;
+    background: url(../images/common/deco_element.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 1vw 0;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .firstView h3::after {
+        height: 1.5vw;
+    }
+}
+
+#contents .firstView .lead {
+    font-family: 'Cormorant Garamond', serif;
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    color: #452505;
+    font-size: 4vw;
+    text-align: center;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+    margin-bottom: 6vw;
+}
+
+.hk #contents .firstView .lead {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents .firstView .lead {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .firstView .lead {
+    font-family: "source-han-serif-korean", serif;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .firstView .lead {
+        font-size: 2vw;
+        margin-bottom: 3vw;
+    }
+}
+
+#contents h4.sub_title {
+    color: #452505;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    font-size: 6.8vw;
+    margin-bottom: 2vw;
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+    text-align: center;
+}
+
+.hk #contents h4.sub_title {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents h4.sub_title {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents h4.sub_title {
+    font-family: "source-han-serif-korean", serif;
+}
+
+
+@media screen and (min-width: 1024px) {
+    #contents h4.sub_title {
+        font-size: 3.125vw;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #contents h4.sub_title {
+        font-size: 45px;
+    }
+}
+
+#contents h4.sub_title span {
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#contents h4.sub_title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4vw;
+    padding-top: 2vw;
+    background: url(../images/character/deco_h3_element.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 3vw auto 4vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents h4.sub_title::after {
+        padding-top: 1vw;
+        height: 2vw;
+        margin: 1vw auto 2vw;
+    }
+}
+
+/*navi*/
+#contents .field_nav_wrapper {
+    width: 87.467%;
+    margin: 6vw auto 0;
+    filter: drop-shadow(0 0 6px rgba(0 0 0 / 30%));
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .field_nav_wrapper {
+        width: 69.79%;
+        margin: 4vw auto 0;
+    }
+}
+
+#contents .field_nav_wrapper .field_nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 6vw 0;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .field_nav_wrapper .field_nav {
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+#contents .field_nav_wrapper .field_nav li {
+    width: 49%;
+    margin-bottom: 3vw;
+    filter: drop-shadow(0 0 6px rgba(0 0 0 / 15%));
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .field_nav_wrapper .field_nav li {
+        width: 46%;
+        margin: 1%;
+    }
+}
+
+
+#contents .field_nav_wrapper .field_nav li .btn_ellipse {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    width: 100%;
+    height: 12vw;
+    font-size: 3.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    background: url(../images/field/bg_ellipse_btn_sp.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: background .2s ease-out;
+}
+
+.hk #contents .field_nav_wrapper .field_nav li .btn_ellipse {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents .field_nav_wrapper .field_nav li .btn_ellipse {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .field_nav_wrapper .field_nav li .btn_ellipse {
+    font-family: "source-han-serif-korean", serif;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .field_nav_wrapper .field_nav li .btn_ellipse {
+        width: 100%;
+        height: 6vw;
+        margin: 0 auto;
+        background: url(../images/field/bg_ellipse_btn.png);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+#contents .field_nav_wrapper .field_nav li .btn_ellipse.selected {
+    background: url(../images/field/bg_ellipse_btn_selected_sp.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .field_nav_wrapper .field_nav li .btn_ellipse.selected {
+        background: url(../images/field/bg_ellipse_btn_selected.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .field_nav_wrapper .field_nav li .btn_ellipse:hover {
+        background: url(../images/field/bg_ellipse_btn_hover.png);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    #contents .field_nav_wrapper .field_nav li .btn_ellipse.selected:hover {
+        background: url(../images/field/bg_ellipse_btn_selected.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #contents .field_nav_wrapper .field_nav li .btn_ellipse:hover span {
+        color: #fff;
+    }
+}
+
+#contents .field_nav_wrapper .field_nav li .btn_ellipse span {
+    color: #e3ca68;
+    font-size: 3.4vw;
+    line-height: 1.2;
+    text-shadow: 0px 0px 5px #000, 0px 0px 5px #000, 0px 0px 5px #000;
+}
+
+#contents .field_nav_wrapper .field_nav li .btn_ellipse.selected span {
+    color: #fff;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .field_nav_wrapper .field_nav li .btn_ellipse span {
+        font-size: 2vw;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    #contents .field_nav_wrapper .field_nav li .btn_ellipse span {
+        font-size: 24px;
+    }
+}
+
+#contents .field_nav_wrapper .field_nav li .btn_ellipse span:after {
+    background: url(../images/common/icon_btn_arrow_down.png) no-repeat;
+    background-size: cover;
+    width: 2vw;
+    height: 1vw;
+    right: 7%;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .field_nav_wrapper .field_nav li .btn_ellipse span:after {
+        width: 1.1vw;
+        height: 0.6vw;
+    }
+}
+
+
+#contents .field_list {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0 8vw;
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .field_list {
+        width: 75%;
+        margin: 0 auto;
+        padding: 3vw 0;
+        max-width: 1366px;
+    }
+}
+
+#contents .field_list.active {
+    display: block;
+}
+
+
+#contents .field_list .colBox {
+    display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .field_list .colBox {
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+}
+
+#contents .field_list .field_block {
+    width: 100%;
+    margin-bottom: 20%;
+    position: relative;
+}
+
+#contents .field_list .field_block .pic {
+    margin-bottom: 12vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .field_list .field_block .pic {
+        margin-bottom: 0;
+    }
+}
+
+#contents .field_list .field_block .caption {
+    width: 90%;
+    margin: 0 auto;
+    padding: 12vw 1em;
+    background: url(../images/common/bg_game_caption.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.15);
+    z-index: 12;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .field_list .field_block .caption {
+        width: 50%;
+        position: absolute;
+        top: 80%;
+        left: -5%;
+        padding: 2em 2em 3em;
+    }
+}
+
+#contents .field_list .field_block .caption::before {
+    content: "";
+    width: 100%;
+    height: 8vw;
+    display: block;
+    position: absolute;
+    top: 0.5vw;
+    left: 0;
+    background: url(../images/common/deco1_up.png) no-repeat;
+    background-position: 98% top;
+    background-size: contain;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .field_list .field_block .caption::before {
+        height: 2vw;
+    }
+}
+
+#contents .field_list .field_block .caption::after {
+    content: "";
+    width: 100%;
+    height: 8vw;
+    display: block;
+    position: absolute;
+    bottom: 0.5vw;
+    left: 0;
+    background: url(../images/common/deco1_down.png) no-repeat;
+    background-position: 2% top;
+    background-size: contain;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .field_list .field_block .caption::after {
+        height: 2vw;
+    }
+}
+
+#contents .field_list .field_block .caption h4 {
+    font-family: 'Cormorant Garamond', serif;
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+
+#contents .field_list .field_block .caption h4 span {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 5vw;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+}
+
+.hk #contents .field_list .field_block .caption h4 span {
+    font-family: "source-han-serif-tc", serif;
+}
+
+.cn #contents .field_list .field_block .caption h4 span {
+    font-family: "source-han-serif-sc", serif;
+}
+
+.kr #contents .field_list .field_block .caption h4 span {
+    font-family: "source-han-serif-korean", serif;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .field_list .field_block .caption h4 span {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #contents .field_list .field_block .caption h4 span {
+        font-size: 40px;
+    }
+
+    .hk #contents .field_list .field_block .caption h4 span,
+    .cn #contents .field_list .field_block .caption h4 span,
+    .kr #contents .field_list .field_block .caption h4 span {
+        font-size: 30px;
+        letter-spacing: 0.2em;
+    }
+}
+
+#contents .field_list .field_block .caption p {
+    color: #452505;
+    font-size: 3vw;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .field_list .field_block .caption p {
+        font-size: 1vw;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    #contents .field_list .field_block .caption p {
+        font-size: 16px;
+    }
+}

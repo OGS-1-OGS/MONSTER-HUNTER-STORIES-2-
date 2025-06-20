@@ -1,0 +1,91 @@
+ /* CSS样式区域开始 */
+ body {
+   background: #000;
+   /* 设置页面背景为黑色，营造游戏的深沉氛围 */
+   font-family: 'open sans', sans-serif;
+   /* 设置字体为open sans，如果不可用则使用无衬线字体 */
+   overflow: hidden;
+   /* 隐藏超出视口的内容，防止滚动条出现，创建沉浸式体验 */
+   color: #fff;
+   /* 设置文本颜色为白色，与黑色背景形成鲜明对比 */
+   margin: 0;
+   /* 移除页面边距，确保内容填满整个视口 */
+   padding: 0;
+   /* 移除页面内边距 */
+   height: 100vh;
+   /* 设置高度为视口高度的100%，确保内容覆盖整个屏幕 */
+   display: flex;
+   /* 使用弹性布局，便于内容居中对齐 */
+   justify-content: center;
+   /* 水平居中内容 */
+   align-items: center;
+   /* 垂直居中内容 */
+ }
+
+ h1 {
+   width: 100%;
+   /* 宽度占满容器 */
+   height: 100%;
+   /* 高度占满容器 */
+   display: flex;
+   /* 使用弹性布局 */
+   justify-content: center;
+   /* 水平居中内容 */
+   align-items: center;
+   /* 垂直居中内容 */
+   text-align: center;
+   /* 文本居中对齐 */
+   font-size: 12vw;
+   /* 字体大小为视口宽度的12%，使文字大小响应式变化 */
+   background: url("../images/wallpaper_stories2_3.jpg") no-repeat center center;
+   /* 设置游戏背景图片，居中且不重复 */
+   background-size: cover;
+   /* 背景图片覆盖整个元素，自动调整大小不变形 */
+   -webkit-background-clip: text;
+   /* 将背景剪裁为文字形状（Webkit浏览器），创建文字填充效果 */
+   background-clip: text;
+   /* 将背景剪裁为文字形状（标准属性） */
+   color: transparent;
+   /* 使文字颜色透明，从而显示背景图片，实现文字填充图片效果 */
+   animation: scale 8s forwards;
+   /* 应用两个动画：
+                                                      1. scale动画持续5秒，从大字体缩小
+                                                      2. back动画持续18秒，改变背景裁剪
+                                                      都设置为forwards，保持最终状态 */
+ }
+
+ a {
+   text-decoration: none;
+   /* 移除链接下划线，使设计更整洁 */
+   color: inherit;
+   /* 继承父元素的颜色，保持一致性 */
+   font-weight: bold;
+   /* 字体加粗，增强可读性和视觉冲击力 */
+   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   /* 添加文字阴影，增强可读性和层次感 */
+ }
+
+ @keyframes scale {
+
+   /* 定义scale动画：文字从非常大逐渐变小，创造戏剧性的缩放效果 */
+   from {
+     font-size: 300vw;
+     /* 初始字体大小为视口宽度的300%，超出屏幕，制造冲击效果 */
+     -webkit-background-clip: text;
+     /* 保持文字裁剪背景效果 */
+     background-clip: text;
+     color: transparent;
+     /* 文字为透明，显示背景图片 */
+   }
+
+   to {
+     font-size: 8vw;
+     /* 最终字体大小为视口宽度的8%，缩小到可读大小 */
+     color: #dfb80a;
+     /* 最终文字颜色变为金色，与游戏主题相符 */
+     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+     /* 添加文字阴影效果，提升立体感 */
+   }
+ }
+
+ /* CSS样式区域结束 */

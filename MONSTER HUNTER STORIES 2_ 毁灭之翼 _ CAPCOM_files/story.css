@@ -1,0 +1,482 @@
+@charset "UTF-8";
+
+/* --------------------------------
+
+	index
+
+-------------------------------- */
+
+
+@media only screen and (min-width: 1024px) {
+    main {
+        background-image: url(../images/common/bg_game.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+
+#contents .firstView {
+    padding-top: 21vw;
+    background: url(../images/story/bg_firstview_sp.jpg) #fff no-repeat;
+    background-size: cover;
+    background-position: 50% top;
+    height: 100vw;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .firstView {
+        padding-top: calc(65px + 3vw);
+        background: url(../images/story/bg_firstview.jpg) #fff no-repeat;
+        background-size: cover;
+        background-position: 50% 2vw;
+        height: 44.0104vw;
+    }
+}
+
+#contents .firstView h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+}
+
+#contents .firstView h3 .ja {
+    color: #452505;
+    font-weight: bold;
+    font-size: 3vw;
+    font-family: "Source Serif 4", serif;
+}
+
+.cn .firstView h3 .ja {
+    font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk .firstView h3 .ja {
+    font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr .firstView h3 .ja {
+    font-family: "source-han-serif-korean", serif !important;
+}
+
+#contents .firstView h3 .en {
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 9vw;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .firstView h3 .ja {
+        font-size: 1.25vw;
+    }
+
+    #contents .firstView h3 .en {
+        font-size: 4.166vw;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #contents .firstView h3 .ja {
+        font-size: 20px;
+    }
+
+    #contents .firstView h3 .en {
+        font-size: 62px;
+    }
+}
+
+#contents .firstView h3::after {
+    content: "";
+    width: 100%;
+    height: 4vw;
+    display: block;
+    background: url(../images/common/deco_element.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 2vw 0;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .firstView h3::after {
+        height: 1.5vw;
+        margin: 1vw 0;
+    }
+}
+
+#contents .firstView .lead {
+    font-family: 'Cormorant Garamond', serif;
+    background: -moz-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: -webkit-linear-gradient(top, #77440e 30%, #452505 70%);
+    background: linear-gradient(to bottom, #77440e 30%, #452505 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    color: #452505;
+    font-size: 4vw;
+    text-align: center;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff);
+    margin-bottom: 6vw;
+}
+
+.cn #contents .firstView .lead {
+    font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk #contents .firstView .lead {
+    font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr #contents .firstView .lead {
+    font-family: "source-han-serif-korean", serif !important;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .firstView .lead {
+        font-size: 2vw;
+        margin-bottom: 3vw;
+    }
+}
+
+#contents .story_list {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 18vw 0 8vw;
+    position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .story_list {
+        width: 75%;
+        margin: 65px auto 0;
+        padding: 3vw 0;
+        max-width: 1366px;
+    }
+}
+
+#contents .story_list .colBox {
+    display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+    #contents .story_list .colBox {
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+}
+
+#contents .story_list .story_block {
+    width: 100%;
+    margin-bottom: 5%;
+    position: relative;
+}
+
+#contents .story_list .story_block .pic {
+    margin-bottom: 4vw;
+}
+
+#contents .story_list .story_block .pic figure {
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+#contents .story_list .story_block .pic figure img {
+    vertical-align: bottom;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .story_list .story_block .pic {
+        width: 60%;
+        margin-left: auto;
+        margin-bottom: 0;
+    }
+
+    #contents .story_list .story_block:nth-child(2n) .pic {
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
+
+#contents .story_list .story_block .caption {
+    width: 90%;
+    margin: -8vw auto 12vw;
+    padding: 12vw 1.5em;
+    background: url(../images/common/bg_game_caption.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.15);
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .story_list .story_block .caption {
+        width: 40%;
+        margin: 0 auto;
+        position: absolute;
+        padding: 2vw 2em;
+        min-height: 20vw;
+        top: 10%;
+        left: 5%;
+    }
+
+    #contents .story_list .story_block:nth-child(2n) .caption {
+        left: inherit;
+        right: 5%;
+    }
+}
+
+#contents .story_list .story_block .caption::before {
+    content: "";
+    width: 100%;
+    height: 8vw;
+    display: block;
+    position: absolute;
+    top: 0.5vw;
+    left: 0;
+    background: url(../images/common/deco1_up.png) no-repeat;
+    background-position: 98% top;
+    background-size: contain;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .story_list .story_block .caption::before {
+        height: 2vw;
+    }
+}
+
+#contents .story_list .story_block .caption::after {
+    content: "";
+    width: 100%;
+    height: 8vw;
+    display: block;
+    position: absolute;
+    bottom: 0.5vw;
+    left: 0;
+    background: url(../images/common/deco1_down.png) no-repeat;
+    background-position: 2% top;
+    background-size: contain;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .story_list .story_block .caption::after {
+        height: 2vw;
+    }
+}
+
+#contents .story_list .story_block .caption p {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    font-weight: bold;
+    font-size: 4vw;
+    line-height: 1.8;
+}
+
+.cn .story_list .story_block .caption p {
+    font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk .story_list .story_block .caption p {
+    font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr .story_list .story_block .caption p {
+    font-family: "source-han-serif-korean", serif !important;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .story_list .story_block .caption p {
+        font-size: 1.3vw;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #contents .story_list .story_block .caption p {
+        font-size: 18px;
+    }
+}
+
+#contents .story_list .story_block .caption p span {
+    color: #452505;
+    font-size: 3vw;
+}
+
+#contents .story_last_block {
+    width: 100%;
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    filter: drop-shadow(-5px 0 10px #fff) drop-shadow(0 0 5px #fff);
+}
+
+#contents .story_last_block figure {
+    width: 49.9%;
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+#contents .story_last_block figure img {
+    vertical-align: bottom;
+}
+
+
+
+#contents .story_last_block .caption {
+    width: 100%;
+    margin: 0 auto;
+    padding: 12vw 0;
+    background: url(../images/story/bg_last_caption.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.15);
+    z-index: 12;
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .story_last_block .caption {
+        padding: 2vw 2em;
+    }
+}
+
+#contents .story_last_block .caption::before {
+    content: "";
+    width: 100%;
+    height: 8vw;
+    display: block;
+    position: absolute;
+    top: 0.5vw;
+    left: 0;
+    background: url(../images/common/deco1_up.png) no-repeat;
+    background-position: 98% top;
+    background-size: contain;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .story_last_block .caption::before {
+        height: 2vw;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #contents .story_last_block .caption::before {
+        background-position: 99.5% top;
+    }
+}
+
+#contents .story_last_block .caption::after {
+    content: "";
+    width: 100%;
+    height: 8vw;
+    display: block;
+    position: absolute;
+    bottom: 0.5vw;
+    left: 0;
+    background: url(../images/common/deco1_down.png) no-repeat;
+    background-position: 2% top;
+    background-size: contain;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .story_last_block .caption::after {
+        height: 2vw;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #contents .story_last_block .caption::after {
+        background-position: 0.5% top;
+    }
+}
+
+#contents .story_last_block .caption h4 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #452505;
+    font-weight: bold;
+    font-size: 5vw;
+    line-height: 1.8;
+}
+
+.cn .story_last_block .caption h4 {
+    font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk .story_last_block .caption h4 {
+    font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr .story_last_block .caption h4 {
+    font-family: "source-han-serif-korean", serif !important;
+}
+
+.pt-br .story_last_block .caption h4 {
+    font-size: 4vw !important;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .story_last_block .caption h4 {
+        font-weight: bold;
+        font-size: 2.5vw;
+        line-height: 1.8;
+    }
+
+    .pt-br .story_last_block .caption h4 {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width: 1466px) {
+    #contents .story_last_block .caption h4 {
+        font-size: 47px;
+    }
+}
+
+#contents .story_last_block .caption p {
+    font-family: "Source Serif 4", serif;
+    color: #452505;
+    font-weight: bold;
+    font-size: 3vw;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.cn .story_last_block .caption p {
+    font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk .story_last_block .caption p {
+    font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr .story_last_block .caption p {
+    font-family: "source-han-serif-korean", serif !important;
+}
+
+@media screen and (min-width: 1024px) {
+    #contents .story_last_block .caption p {
+        font-size: 1.4vw;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #contents .story_last_block .caption p {
+        font-size: 24px;
+    }
+}
+
+#contents .story_last_block .caption p span {
+    color: #452505;
+    font-size: 3vw;
+}

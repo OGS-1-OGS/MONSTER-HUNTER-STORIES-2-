@@ -1,0 +1,1477 @@
+@charset "UTF-8";
+
+/************************************
+  font
+************************************/
+@font-face {
+  font-family: "source-han-sans-japanese";
+  src: url("https://www.capcom-games.com/common/font/SourceHanSansJP-VF.otf.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "source-han-sans-traditional";
+  src: url("https://www.capcom-games.com/common/font/SourceHanSansTW-VF.otf.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "source-han-sans-simplified-c";
+  src: url("https://www.capcom-games.com/common/font/SourceHanSansCN-VF.otf.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "source-han-sans-korean";
+  src: url("https://www.capcom-games.com/common/font/SourceHanSansKR-VF.otf.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("https://www.capcom-games.com/common/font/SourceSans3-VF.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "source-han-serif-japanese";
+  src: url("https://www.capcom-games.com/common/font/SourceHanSerifJP-VF.otf.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "source-han-serif-tc";
+  src: url("https://www.capcom-games.com/common/font/SourceHanSerifTW-VF.otf.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "source-han-serif-sc";
+  src: url("https://www.capcom-games.com/common/font/SourceHanSerifCN-VF.otf.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "source-han-serif-korean";
+  src: url("https://www.capcom-games.com/common/font/SourceHanSerifKR-VF.otf.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("https://www.capcom-games.com/common/font/SourceSerif4-VF.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("https://www.monsterhunter.com/common/font/CormorantGaramond-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("https://www.monsterhunter.com/common/font/CormorantGaramond-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("https://www.monsterhunter.com/common/font/CormorantGaramond-Medium.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("https://www.monsterhunter.com/common/font/CormorantGaramond-Bold.woff2") format("woff2");
+  font-display: swap;
+  font-weight: bold;
+}
+
+/* --------------------------------
+
+	base
+
+-------------------------------- */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #e4dfc8;
+  color: #241604;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 3.46667vw;
+  font-weight: 400;
+  width: 100%;
+  overflow-x: hidden;
+  letter-spacing: 0.001em;
+}
+
+body.hk {
+  font-family: "source-han-sans-traditional", sans-serif;
+}
+
+body.cn {
+  font-family: "source-han-sans-simplified-c", sans-serif;
+}
+
+body.kr {
+  font-family: "source-han-sans-korean", sans-serif;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 1.134vw;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  html.is-fixed body {
+    overflow: hidden;
+  }
+}
+
+body #wrapper img {
+  border: none;
+  height: auto;
+  margin: auto;
+  outline: none;
+  width: 100%;
+}
+
+/* --------------------------------
+
+	parts
+
+-------------------------------- */
+.btn_wrap {
+  width: 50%;
+  margin: 0 auto;
+  transition: all 0.5s ease-in-out;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
+}
+
+@media only screen and (min-width: 1024px) {
+  .btn_wrap {
+    width: 15vw;
+    margin: 0 auto;
+  }
+}
+
+.btn_hex {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bold;
+  width: 100%;
+  height: 8vw;
+  font-size: 3.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/common/deco_btn_pattern.png), url(../images/common/bg_btn.png);
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  color: #fff;
+  position: relative;
+  margin: 4vw auto;
+  transition: background .2s ease-out;
+  clip-path: polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
+}
+
+.cn .btn_hex {
+  font-family: "source-han-serif-sc", serif !important;
+}
+
+.hk .btn_hex {
+  font-family: "source-han-serif-tc", serif !important;
+}
+
+.kr .btn_hex {
+  font-family: "source-han-serif-korean", serif !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_hex {
+    width: 15vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    margin: 2vw auto;
+  }
+}
+
+.btn_hex span:after {
+  content: "";
+  width: 3vw;
+  height: 3vw;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  background: url(../images/common/icon_btn_arrow.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_hex span:after {
+    width: 0.8vw;
+    height: 0.8vw;
+  }
+}
+
+.btn_hex:hover {
+  -webkit-filter: brightness(120%);
+  filter: brightness(120%);
+}
+
+.btn_store {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bold;
+  width: 100%;
+  height: 14vw;
+  font-size: 3.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/common/deco_btn_pattern3.png), linear-gradient(to right, #c42525, #d73737);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #fff;
+  position: relative;
+  margin: 4vw 0;
+  transition: background .2s ease-out;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.hk .btn_store {
+  font-family: "source-han-serif-tc", serif;
+}
+
+.cn .btn_store {
+  font-family: "source-han-serif-sc", serif;
+}
+
+.kr .btn_store {
+  font-family: "source-han-serif-korean", serif;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_store {
+    width: 90%;
+    height: 5vw;
+    font-size: 1.4vw;
+    margin: 1vw 0;
+  }
+
+  .btn_store:hover {
+    -webkit-filter: brightness(110%);
+    filter: brightness(110%);
+  }
+}
+
+.btn_store.disable {
+  pointer-events: none;
+  background: url(../images/common/deco_btn_pattern4.png), linear-gradient(to right, #cbcac5, #8e8d8a);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  box-shadow: none;
+}
+
+.btn_store span:after {
+  content: "";
+  width: 3vw;
+  height: 3vw;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  background: url(../images/common/icon_btn_arrow_wht.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.btn_store.disable span:after {
+  content: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_store span:after {
+    width: 0.8vw;
+    height: 0.8vw;
+  }
+}
+
+.btn_hexbdr {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bold;
+  width: 40vw;
+  height: 10vw;
+  background: url(../images/common/bg_btn_hexbdr.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 3.8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  margin: 4vw auto;
+  transition: background .2s ease-out;
+  clip-path: polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_hexbdr {
+    width: 17.7083vw;
+    height: 4.45vw;
+    font-size: 1.5vw;
+    margin: 2vw 0;
+  }
+
+  .btn_hexbdr:hover {
+    color: #e3ca68;
+    background: url(../images/common/bg_btn_hexbdr_on.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.btn_spec {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bold;
+  width: 100%;
+  height: 8vw;
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(to right, #ccc, #eee); */
+  background: #fff;
+  position: relative;
+  margin: 4vw 0;
+  transition: all .2s ease-out;
+  border: 1px solid #8e8d8a;
+}
+
+.hk .btn_spec {
+  font-family: "source-han-serif-tc", serif;
+}
+
+.cn .btn_spec {
+  font-family: "source-han-serif-sc", serif;
+}
+
+.kr .btn_spec {
+  font-family: "source-han-serif-korean", serif;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_spec {
+    width: 90%;
+    height: 3vw;
+    font-size: 1.2vw;
+    margin: 1vw 0;
+  }
+
+  .btn_spec:hover {
+    border: 1px solid #000;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_spec {
+    width: 90%;
+    height: 3vw;
+    margin: 1vw 0;
+  }
+
+  .btn_spec:hover {
+    border: 1px solid #000;
+  }
+}
+
+.btn_spec.disable {
+  pointer-events: none;
+  background: linear-gradient(to right, #cbcac5, #8e8d8a);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  box-shadow: none;
+}
+
+.btn_spec span:after {
+  content: "";
+  width: 3vw;
+  height: 3vw;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  background: url(../images/common/icon_btn_arrow_blk.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.btn_spec.disable span:after {
+  content: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_spec span:after {
+    width: 0.8vw;
+    height: 1vw;
+  }
+}
+
+/* --------------------------------
+
+	page_top
+
+-------------------------------- */
+.page_top {
+  width: 15vw;
+  position: fixed;
+  bottom: 20vw;
+  right: 1vw;
+  display: block;
+  max-width: 112px;
+  z-index: 109;
+  transition: all .5s ease;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
+  .page_top {
+    width: 8vw;
+    bottom: 8vw;
+  }
+}
+
+.page_top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.page_top img {
+  width: 100%;
+}
+
+/*リンク*/
+.link_text {
+  color: #cf6830;
+  text-decoration: underline;
+}
+
+.link_text:hover {
+  text-decoration: none;
+}
+
+/*見出し装飾*/
+.deco_cap {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bold;
+  padding: 0.2em;
+  color: #fff0be;
+  font-size: 4vw;
+  background: url(../images/common/deco_cap_pattern_left.png), url(../images/common/deco_cap_pattern_right.png), #241604;
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto 100%;
+  background-position: left, right;
+  text-align: center;
+  margin-bottom: 4vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .deco_cap {
+    font-size: 1.7188vw;
+    margin-bottom: 2vw;
+  }
+}
+
+.hk .deco_cap {
+  font-family: "source-han-serif-tc", serif;
+}
+
+.cn .deco_cap {
+  font-family: "source-han-serif-sc", serif;
+}
+
+.kr .deco_cap {
+  font-family: "source-han-serif-korean", serif;
+}
+
+/*decoration block*/
+.deco_block_line {
+  position: relative;
+}
+
+.deco_block_line::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4vw;
+  background: url(../images/common/deco_block_line.jpg) repeat-x;
+  background-size: contain;
+  position: relative;
+  z-index: 98;
+}
+
+@media screen and (min-width: 1024px) {
+  .deco_block_line::before {
+    height: 30px;
+  }
+}
+
+/*decoration block*/
+.deco_line_element {
+  position: relative;
+}
+
+.deco_line_element::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4vw;
+  background: url(../images/common/deco_element.png) no-repeat center;
+  background-size: contain;
+  position: relative;
+  z-index: 98;
+  margin-bottom: 6vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .deco_line_element::before {
+    height: 2.5vw;
+    height: 2vw;
+    margin-bottom: 3vw;
+  }
+}
+
+/*SP background*/
+.pagebg_sp {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.pagebg_sp::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: #000 url(../images/common/bg_game_sp.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow-x: hidden;
+}
+
+@media only screen and (min-width: 1024px) {
+  .pagebg_sp::after {
+    background: url(../images/common/bg_game.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+/*NEW マーク*/
+.ic_wrapper {
+  display: table;
+  margin: 0 auto;
+}
+
+.ic::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ic.ic_up {
+  position: relative;
+}
+
+.ic.ic_up::before,
+.ic.ic_up::after {
+  background: #00b9af;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 10px;
+  left: 0;
+  position: absolute;
+  top: -16px;
+  width: 10px;
+  z-index: 1;
+}
+
+header .ic.ic_up::before,
+header .ic.ic_up::after {
+  background: #00b9af;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  left: -10px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.ic_wrapper.ic.ic_up::before,
+.ic_wrapper.ic.ic_up::after {
+  left: -12px;
+  top: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .ic_wrapper.ic.ic_up::before,
+  .ic_wrapper.ic.ic_up::after {
+    left: -16px;
+    top: 16px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .ic.ic_up::before,
+  .ic.ic_up::after {}
+}
+
+.ic.ic_up::after {
+  animation: pulsate 1.5s ease infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  100% {
+    opacity: .1;
+    transform: scale(3, 3);
+  }
+}
+
+body *[data-anim="elem"] {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.5s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+body *[data-anim="text"] {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.5s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+body *[data-anim="image"] {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: border 0.2s ease-in, box-shadow 0.4s ease-in, opacity 1.5s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@media only screen and (min-width: 1024px) {
+  body *[data-anim="image"] {
+    transform: translateY(60px) scale(1.05);
+  }
+}
+
+body .is-anim[data-anim="elem"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body .is-anim[data-anim="text"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body .is-anim[data-anim="image"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------
+
+	header
+
+-------------------------------- */
+header {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  background: url(../images/common/bg_gnav_sp.jpg) no-repeat;
+  background-size: cover;
+  z-index: 110;
+  transition: top .4s ease;
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: url(../images/common/deco_btn_pattern_header.png) no-repeat, url(../images/common/bg_header.jpg) no-repeat;
+    background-size: contain, cover;
+    box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .pt-br header {
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: url(../images/common/deco_btn_pattern_header.png) no-repeat, url(../images/common/deco_btn_pattern_header_right.png) no-repeat, url(../images/common/bg_header.jpg) no-repeat;
+    background-size: contain, contain, cover;
+    background-position: left, right, left;
+    box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+header.open {
+  top: 0;
+  overflow-y: auto;
+}
+
+header li a span {
+  display: none;
+}
+
+header.open li a span {
+  display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+  header li a span {
+    display: block;
+  }
+}
+
+.sp_menu {
+  width: 15vw;
+  height: 16vw;
+  cursor: pointer;
+  background: url(../images/common/sp_menu_bg.png) no-repeat;
+  background-size: 100%;
+  position: fixed;
+  top: 0;
+  right: 3vw;
+  padding: 2vw 2vw 4vw;
+  z-index: 120;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-out;
+}
+
+@media only screen and (min-width: 1024px) {
+  .sp_menu {
+    display: none;
+  }
+}
+
+.sp_menu figure {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.sp_menu.open figure {
+  content: url(../images/common/sp_menu_close.png);
+}
+
+@keyframes slideIn {
+  0% {
+    top: -100%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  header nav {
+    width: 100%;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  header .logo {
+    display: none;
+  }
+}
+
+.sp_logo {
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  width: 30%;
+  line-height: 0;
+  transition: all 0.6s ease-out;
+  z-index: 20;
+}
+
+.index .sp_logo {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .sp_logo {
+    display: none;
+  }
+}
+
+header.open .logo {
+  display: block;
+  position: relative;
+  line-height: 0;
+  width: 60%;
+  margin: 12vw auto 10vw;
+}
+
+.index header.open .logo {
+  display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+  header .logo {
+    position: inherit;
+    width: 105px;
+    margin: 0 0 0 8%;
+  }
+}
+
+header .logo.is-hide {
+  opacity: 0;
+}
+
+header.open .logo.is-hide {
+  opacity: 1;
+}
+
+header nav ul {
+  width: 90%;
+  margin: 1em auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease-out;
+}
+
+header.open nav ul {
+  display: flex;
+}
+
+@media only screen and (min-width: 1024px) {
+  header nav ul {
+    width: 50%;
+    flex-direction: row;
+    margin: 1em auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1200px) {}
+
+header nav ul li {
+  margin: 0 3% 5%;
+}
+
+@media only screen and (min-width: 1024px) {
+  header nav ul li {
+    margin: 0 3%;
+  }
+}
+
+header a {
+  display: table-cell;
+  color: #c0ab5a;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 8vw;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 5vw;
+}
+
+@media only screen and (min-width: 1024px) {
+  header a {
+    display: block;
+    font-size: 1.3666vw;
+    transition: all 0.5s ease-out;
+    margin-bottom: 0;
+  }
+}
+
+header.open a span {
+  display: block;
+}
+
+header a .ja {
+  font-size: 0.5em;
+}
+
+@media only screen and (min-width: 1200px) {
+  header a {
+    font-size: 18px;
+  }
+
+  header a .ja {
+    font-size: 12px;
+  }
+}
+
+header a:hover {
+  color: #ffcb00;
+}
+
+header .btn_buy {
+  display: none;
+  width: 70%;
+}
+
+header.open .btn_buy {
+  display: inherit;
+  width: 70%;
+}
+
+@media only screen and (min-width: 1024px) {
+  header .btn_buy {
+    display: block;
+    height: 100%;
+    width: auto;
+    clip-path: polygon(8% 0%, 100% 0%, 100% 50%, 100% 100%, 8% 100%, 0% 50%);
+    margin-right: -2px
+  }
+}
+
+.btn_buy {
+  padding: 2px;
+  background: -moz-linear-gradient(top, #8c5101, #dfd65f, #8c5101);
+  background: -webkit-linear-gradient(top, #8c5101, #dfd65f, #8c5101);
+  background: linear-gradient(to bottom, #8c5101, #dfd65f, #8c5101);
+  clip-path: polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
+}
+
+.btn_buy a {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  padding: 0.5em 0;
+  font-size: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/common/deco_btn_pattern.png), url(../images/common/bg_btn.png);
+  background-repeat: no-repeat;
+  background-size: contain, cover;
+  color: #fff;
+  position: relative;
+  transition: background .2s ease-out;
+  clip-path: polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%);
+  transition: all 0.5s ease-out;
+}
+
+.hk .btn_buy a {
+  font-family: "source-han-serif-tc", serif;
+}
+
+.cn .btn_buy a {
+  font-family: "source-han-serif-sc", serif;
+}
+
+.kr .btn_buy a {
+  font-family: "source-han-serif-korean", serif;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_buy a {
+    width: 240px;
+    font-size: 1.5vw;
+    background-size: 103%, cover;
+    clip-path: polygon(8% 0%, 100% 0%, 100% 50%, 100% 100%, 8% 100%, 0% 50%);
+  }
+
+  .btn_buy a:hover {
+    -webkit-filter: brightness(120%);
+    filter: brightness(120%);
+  }
+
+  /* .pt-br .btn_buy {
+    width: 200px;
+  } */
+}
+
+header .btn_buy a {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+  header .btn_buy a {
+    font-size: 22px;
+  }
+}
+
+.btn_buy span {
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn_buy span:after {
+  content: "";
+  width: 4vw;
+  height: 6vw;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: url(../images/common/icon_btn_arrow_sdw.png) no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 1)), drop-shadow(0 0 1rem rgba(0, 0, 0, 1));
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_buy span:after {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/*固定購入ボタン*/
+.btn_buy_wrapper {
+  width: 48vw;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 109;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+  transition: all 0.8s ease-out;
+}
+
+.btn_buy.follow {
+  width: 100%;
+  clip-path: polygon(0 0%, 92% 0%, 100% 50%, 92% 100%, 0 100%, 0% 50%);
+}
+
+.btn_buy_wrapper.active {
+  left: -2px;
+}
+
+.btn_buy.follow a {
+  font-size: 4.5vw;
+  clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%, 0% 50%);
+}
+
+.btn_buy.follow a span {
+  margin-left: -3vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn_buy.follow {
+    display: none;
+  }
+}
+
+/* --------------------------------
+
+	footer
+
+-------------------------------- */
+.footer-copyright {
+  color: #fff;
+  font-size: 2.8vw;
+  margin: 6vw 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1023px) {
+  .footer-copyright {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer-copyright {
+    font-size: .935vw;
+    margin: 2vw 0;
+  }
+}
+
+@media only screen and (min-width: 1369px) {
+  .footer-copyright {
+    font-size: 14px;
+    margin-bottom: 2vw;
+  }
+}
+
+#title_footer {
+  position: relative;
+  z-index: 1;
+}
+
+#title_footer {
+  background: #000;
+}
+
+/* --------------------------------
+
+	langSelect
+
+-------------------------------- */
+.lang-select {
+  font-size: 4vw;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 1023px) {
+  .lang-select {
+    background: #000;
+    padding: 6vw 0 2vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .lang-select {
+    font-size: 1.14583vw;
+    position: relative;
+    z-index: 101;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .lang-select {}
+}
+
+.lang-select form {
+  position: relative;
+}
+
+.lang-select-box {
+  display: none;
+}
+
+.lang-list {
+  letter-spacing: -.4em;
+}
+
+.lang-list li {
+  display: inline-block;
+  letter-spacing: normal;
+  line-height: 1;
+}
+
+.lang-list li a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.lang-list li:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.8);
+  margin-right: 1em;
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 1024px) {
+  .lang-list li:first-child {
+    margin-right: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+
+/* --------------------------------
+
+	content
+
+-------------------------------- */
+#wrapper {
+  line-height: 1.5;
+  position: relative;
+}
+
+@media only screen and (max-width: 1023px) {
+  #wrapper {
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #wrapper {
+    width: 100%;
+  }
+}
+
+.contsInner {
+  position: relative;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+  .contsInner {}
+}
+
+@media only screen and (min-width: 1024px) {
+  .colBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+/* --------------------------------
+
+	module
+
+-------------------------------- */
+/****** clearfix ******/
+.cf::before,
+.cf::after {
+  content: "";
+  display: table;
+}
+
+.cf::after {
+  clear: both;
+}
+
+/****** icon ******/
+.ic::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/****** テキスト ******/
+/*----- 字間 -----*/
+.kerning {
+  margin-right: -0.5em;
+  margin-left: -0.5em;
+  position: relative;
+}
+
+.kerningL {
+  margin-left: -0.3em;
+  position: relative;
+}
+
+.kerningR {
+  margin-right: -0.3em;
+  position: relative;
+}
+
+/*----- 位置 -----*/
+.t_left {
+  text-align: left;
+}
+
+.t_center {
+  text-align: center;
+}
+
+.t_right {
+  text-align: right;
+}
+
+@media only screen and (min-width: 1024px) {
+  .pc_left {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .pc_center {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .pc_right {
+    text-align: right;
+  }
+}
+
+
+/****** 表示 ******/
+/*** PC ***/
+@media only screen and (min-width: 1024px) {
+  .sp {
+    display: none !important;
+  }
+
+  .tab {
+    display: none !important;
+  }
+
+  .pc_tab {
+    display: block !important;
+  }
+
+  .sp_tab {
+    display: none !important;
+  }
+}
+
+/*** SP ***/
+@media screen and (max-width: 1023px) {
+  .sp {
+    display: block !important;
+  }
+
+  .pc {
+    display: none !important;
+  }
+
+  .tab {
+    display: none !important;
+  }
+
+  .pc_tab {
+    display: none !important;
+  }
+
+  .sp_tab {
+    display: block !important;
+  }
+}
+
+/****** category *****/
+:root {
+  --category-game-color: #0d7ec4;
+  --category-media-color: #019478;
+  --category-campaign-color: #d77417;
+  /*キャンペーン*/
+  --category-mhb-color: #ae8f63;
+  --category-event-color: #8c48af;
+  --category-goods-color: #cf0707;
+}
+
+.info .category {
+  margin-right: auto;
+  font-size: 3vw;
+  font-weight: 500;
+  border-left: 6px #000 solid;
+  padding-left: 0.5em;
+}
+
+@media screen and (min-width: 1024px) {
+  .info .category {
+    font-size: 0.9vw;
+  }
+}
+
+.info .category.cat_game {
+  border-color: var(--category-game-color);
+  color: var(--category-game-color);
+}
+
+.info .category.cat_media {
+  border-color: var(--category-media-color);
+  color: var(--category-media-color);
+}
+
+.info .category.cat_campaign {
+  border-color: var(--category-campaign-color);
+  color: var(--category-campaign-color);
+}
+
+.info .category.cat_mhb {
+  border-color: var(--category-mhb-color);
+  color: var(--category-mhb-color);
+}
+
+.info .category.cat_event {
+  border-color: var(--category-event-color);
+  color: var(--category-event-color);
+}
+
+.info .category.cat_goods {
+  border-color: var(--category-goods-color);
+  color: var(--category-goods-color);
+}
+
+.info .date {
+  margin-top: auto;
+  font-size: 2vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .info .date {
+    font-size: 0.8vw;
+  }
+}
+
+.tred {
+  color: #b8342e;
+  font-weight: bold;
+}
+
+.tblue {
+  color: #1b61b9;
+  font-weight: bold;
+}
+
+.tgreen {
+  color: #5b9326;
+  font-weight: bold;
+}
