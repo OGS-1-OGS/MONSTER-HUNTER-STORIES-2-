@@ -17,7 +17,7 @@
 
 #contents .firstView {
     padding-top: calc(65px + 3vw);
-    background: url(../images/system/pic_firstview.png) #fff no-repeat;
+    background: url(../images/system/bg_firstview_sp.jpg) #fff no-repeat;
     background-size: cover;
     height: 100vw;
     position: relative;
